@@ -1,0 +1,270 @@
+{
+  "_meta": {
+    "project": "Sunbulah School — bilingual landing page",
+    "primaryLanguage": "ar",
+    "secondaryLanguage": "en",
+    "direction": { "ar": "rtl", "en": "ltr" },
+    "lastUpdated": "2026-09-21",
+    "confidence": {
+      "verified": "Sourced from the school's own Facebook/Instagram/Threads presence.",
+      "needsConfirmation": "Plausible but NOT confirmed by the school. Must be checked before launch.",
+      "placeholder": "Invented scaffolding so the page renders. Replace entirely."
+    }
+  },
+
+  "identity": {
+    "nameAr": "مؤسسة السنبلة التعليمية",
+    "nameEn": "Al-Sunbulah Educational Institution",
+    "legalNameAr": "مدرسة السنبلة الابتدائية الأهلية المختلطة",
+    "legalNameEn": "Al-Sunbulah Private Mixed Primary School",
+    "shortAr": "السنبلة",
+    "shortEn": "Sunbulah",
+    "descriptorAr": "روضة ومدرسة ابتدائية أهلية",
+    "descriptorEn": "Private Kindergarten & Primary School",
+    "taglineAr": "تعليمٌ متميّز… ومستقبلٌ مشرق",
+    "taglineEn": "Distinctive education. A brighter future.",
+    "_source": "verified — Facebook page title, Instagram bio, Threads bio"
+  },
+
+  "facts": {
+    "kindergartenFounded": 2016,
+    "primaryFounded": 2019,
+    "licensedByAr": "مديرية تربية بابل",
+    "licensedByEn": "Babil Directorate of Education",
+    "coeducational": true,
+    "stages": ["kindergarten", "primary"],
+    "primaryGrades": "1-6",
+    "_source": "verified — Threads bio states KG est. 2016, primary est. 2019, licensed by Babil education directorate",
+    "_note": "primaryGrades 1-6 is the standard Iraqi primary structure — CONFIRM the school actually runs all six."
+  },
+
+  "contact": {
+    "phone": "07700097426",
+    "phoneIntl": "+9647700097426",
+    "whatsapp": "9647700097426",
+    "addressAr": "الكفل — محافظة بابل — العراق",
+    "addressEn": "Al-Kifl, Babil Governorate, Iraq",
+    "email": null,
+    "mapUrl": null,
+    "_source": "phone + city: verified from Instagram profile contact info",
+    "_needsConfirmation": [
+      "Exact street address / nearest landmark",
+      "Whether the listed number takes WhatsApp",
+      "Official email address",
+      "Google Maps pin",
+      "Office hours"
+    ]
+  },
+
+  "social": {
+    "facebook": "https://www.facebook.com/SunbulahSchool/",
+    "instagram": "https://www.instagram.com/sanbula2016/",
+    "threads": "https://www.threads.com/@sanbula2016",
+    "_source": "verified — supplied by client + confirmed live"
+  },
+
+  "story": {
+    "ar": "اسمنا ليس مصادفة. السنبلة حبّةٌ زُرعت في الأرض، فصبرت، ثم أنبتت سبع سنابل. وهكذا نرى كل طفلٍ يدخل من بابنا: بذرةٌ تحتاج تربةً طيبة، وماءً في وقته، ويداً صبورة تنتظر الموسم دون استعجال. نحن لا نزرع المعلومة وحدها — نزرع الفضول، والخُلق، والثقة بالنفس.",
+    "en": "Our name is no accident. A sunbulah is an ear of wheat — one grain planted in the earth, which waited, and then brought forth seven ears. That is how we see every child who walks through our gate: a seed that needs good soil, water at the right moment, and a patient hand willing to wait for the season. We do not plant knowledge alone — we plant curiosity, character, and confidence.",
+    "_source": "written for this project; the wheat/seven-ears image is a Qur'anic allusion (2:261) appropriate to the school's name and context",
+    "_action": "READ ALOUD TO THE PRINCIPAL. This is the voice of the whole site — it must sound like them, not like us."
+  },
+
+  "activities": [
+    {
+      "id": "pottery",
+      "titleAr": "الرسم على الفخار",
+      "titleEn": "Pottery painting",
+      "bodyAr": "تجربة فنية ممتعة تجمع بين الإبداع والتعلّم واكتشاف المواهب، وتنمّي المهارات اليدوية والتعبير الحر عند الأطفال.",
+      "bodyEn": "A joyful hands-on workshop that brings together creativity, learning and talent discovery — building fine motor skills and free expression.",
+      "_source": "verified — posted activity"
+    },
+    {
+      "id": "drawing-contest",
+      "titleAr": "مسابقة الرسم للموهوبين",
+      "titleEn": "Gifted young artists' competition",
+      "bodyAr": "شاركت السنبلة بنخبة من تلاميذها المبدعين الذين عبّروا بريشتهم عن جمال أفكارهم وبراءة أحلامهم.",
+      "bodyEn": "Sunbulah took part with a group of its most creative pupils, who put the beauty of their ideas and the innocence of their dreams onto the page.",
+      "_source": "verified — posted activity, paraphrased from the school's own caption"
+    },
+    {
+      "id": "community-service",
+      "titleAr": "خدمة الزائرين",
+      "titleEn": "Serving the pilgrims",
+      "bodyAr": "يشارك تلاميذنا في خدمة زائري الإمام الحسين عليه السلام وتوزيع الضيافة، فيتعلّمون العطاء بأيديهم لا بالكلام.",
+      "bodyEn": "Our pupils help serve visitors to the shrine of Imam al-Husayn, offering refreshments — learning generosity with their hands, not from a textbook.",
+      "_source": "verified — posted activity"
+    },
+    {
+      "id": "childrens-day",
+      "titleAr": "يوم الطفل العالمي",
+      "titleEn": "World Children's Day",
+      "bodyAr": "احتفالية سنوية بالطفولة، لأن أطفال العراق هم الأمل والبسمة والمستقبل.",
+      "bodyEn": "An annual celebration of childhood — because Iraq's children are its hope, its smile and its future.",
+      "_source": "verified — posted activity"
+    }
+  ],
+
+  "stages": {
+    "kindergarten": {
+      "titleAr": "الروضة",
+      "titleEn": "Kindergarten",
+      "agesAr": "من 3 إلى 5 سنوات",
+      "agesEn": "Ages 3–5",
+      "sinceLabel": 2016,
+      "pointsAr": [
+        "التعلّم باللعب والاكتشاف",
+        "الحروف والأرقام والمهارات الأولى",
+        "الفنون والأشغال اليدوية",
+        "بناء السلوك والاعتماد على النفس"
+      ],
+      "pointsEn": [
+        "Learning through play and discovery",
+        "Letters, numbers and first skills",
+        "Art and hands-on making",
+        "Building behaviour and independence"
+      ],
+      "_needsConfirmation": "Age bands and whether a تمهيدي (pre-KG) class exists."
+    },
+    "primary": {
+      "titleAr": "الابتدائية",
+      "titleEn": "Primary school",
+      "agesAr": "من الصف الأول إلى السادس",
+      "agesEn": "Grades 1 to 6",
+      "sinceLabel": 2019,
+      "pointsAr": [
+        "المنهج الوزاري العراقي المعتمد",
+        "تقوية في اللغة الإنكليزية والرياضيات",
+        "صفوف بأعداد محدودة ومتابعة فردية",
+        "تقارير دورية لولي الأمر"
+      ],
+      "pointsEn": [
+        "The official Iraqi national curriculum",
+        "Extra support in English and mathematics",
+        "Small classes with individual attention",
+        "Regular progress reports for parents"
+      ],
+      "_needsConfirmation": "Curriculum framing, whether English/Maths enrichment genuinely exists, class sizes."
+    }
+  },
+
+  "pillars": [
+    { "ar": "صفوف بأعداد محدودة", "en": "Small class sizes", "_confidence": "needsConfirmation" },
+    { "ar": "كادر تعليمي مؤهل", "en": "Qualified teaching staff", "_confidence": "needsConfirmation" },
+    { "ar": "متابعة يومية مع الأهل", "en": "Daily contact with parents", "_confidence": "needsConfirmation" },
+    { "ar": "أنشطة فنية ومهارية", "en": "Arts and skills activities", "_confidence": "verified" },
+    { "ar": "تربية على القيم والسلوك", "en": "Values and character", "_confidence": "verified" },
+    { "ar": "بيئة آمنة ونظيفة", "en": "A safe, clean environment", "_confidence": "needsConfirmation" }
+  ],
+
+  "schedule": {
+    "_confidence": "placeholder",
+    "_action": "REPLACE WITH THE REAL TIMETABLE before launch, or delete the section.",
+    "items": [
+      { "time": "7:45", "ar": "الاصطفاف الصباحي", "en": "Morning assembly" },
+      { "time": "8:00", "ar": "الحصص الأساسية", "en": "Core lessons" },
+      { "time": "10:00", "ar": "الفسحة والوجبة", "en": "Break and snack" },
+      { "time": "10:30", "ar": "إنكليزي ورياضيات", "en": "English and maths" },
+      { "time": "12:00", "ar": "نشاط فني أو مهاري", "en": "Arts or skills activity" },
+      { "time": "13:00", "ar": "المراجعة والانصراف", "en": "Review and dismissal" }
+    ]
+  },
+
+  "admissions": {
+    "_confidence": "needsConfirmation",
+    "_action": "Verify the document list against what the school actually asks for.",
+    "steps": [
+      { "ar": "تواصل معنا هاتفياً أو عبر واتساب", "en": "Call or message us on WhatsApp" },
+      { "ar": "زيارة المدرسة وجولة تعريفية", "en": "Visit the school for a tour" },
+      { "ar": "تقديم مستندات التسجيل", "en": "Submit the enrolment documents" },
+      { "ar": "لقاء بسيط لتحديد المستوى", "en": "A short placement meeting" },
+      { "ar": "إكمال التسجيل واستلام الجدول", "en": "Complete enrolment and receive the timetable" }
+    ],
+    "documentsAr": [
+      "إخراج قيد أو هوية الأحوال المدنية للطفل",
+      "البطاقة الوطنية لولي الأمر",
+      "صور شخصية حديثة",
+      "التقرير الصحي وسجل التطعيمات",
+      "وثيقة النقل من المدرسة السابقة (للصفوف)"
+    ],
+    "documentsEn": [
+      "Child's civil ID or birth registration extract",
+      "Parent's national ID card",
+      "Recent passport photos",
+      "Health report and vaccination record",
+      "Transfer certificate from the previous school (grades only)"
+    ]
+  },
+
+  "faq": [
+    {
+      "qAr": "ما الأعمار التي تقبلونها؟",
+      "qEn": "What ages do you accept?",
+      "aAr": "نستقبل أطفال الروضة من عمر 3 سنوات، وتلاميذ الابتدائية من الصف الأول حتى السادس.",
+      "aEn": "We welcome kindergarten children from age 3, and primary pupils from grade 1 through grade 6.",
+      "_confidence": "needsConfirmation"
+    },
+    {
+      "qAr": "هل المدرسة مختلطة؟",
+      "qEn": "Is the school co-educational?",
+      "aAr": "نعم، السنبلة مدرسة ابتدائية أهلية مختلطة.",
+      "aEn": "Yes — Sunbulah is a private, co-educational primary school.",
+      "_confidence": "verified"
+    },
+    {
+      "qAr": "ما المنهج المعتمد؟",
+      "qEn": "Which curriculum do you follow?",
+      "aAr": "نعتمد المنهج الوزاري العراقي الرسمي، مع برامج إثرائية في اللغة والرياضيات والأنشطة الفنية.",
+      "aEn": "We follow the official Iraqi national curriculum, with enrichment in language, mathematics and the arts.",
+      "_confidence": "needsConfirmation"
+    },
+    {
+      "qAr": "هل المدرسة مجازة رسمياً؟",
+      "qEn": "Is the school officially licensed?",
+      "aAr": "نعم، مؤسسة السنبلة التعليمية مجازة من مديرية تربية بابل.",
+      "aEn": "Yes — Al-Sunbulah Educational Institution is licensed by the Babil Directorate of Education.",
+      "_confidence": "verified"
+    },
+    {
+      "qAr": "هل تتوفر خدمة النقل المدرسي؟",
+      "qEn": "Is school transport available?",
+      "aAr": "يرجى التواصل مع الإدارة لمعرفة خطوط النقل المتاحة لمنطقتكم.",
+      "aEn": "Please contact the office to ask about routes serving your area.",
+      "_confidence": "placeholder",
+      "_action": "Answer properly or remove this question."
+    },
+    {
+      "qAr": "كيف أتابع مستوى ابني؟",
+      "qEn": "How do I follow my child's progress?",
+      "aAr": "عبر التقارير الدورية، واللقاءات مع المعلمة، ومجموعة التواصل الخاصة بالصف.",
+      "aEn": "Through regular reports, meetings with the class teacher, and your class's messaging group.",
+      "_confidence": "needsConfirmation"
+    }
+  ],
+
+  "testimonials": {
+    "_confidence": "placeholder",
+    "_action": "DO NOT LAUNCH WITH THESE. Collect three real parent quotes with permission, or delete the section. Fabricated testimonials are a legal and reputational risk.",
+    "items": [
+      { "ar": "—", "en": "—", "byAr": "—", "byEn": "—" }
+    ]
+  },
+
+  "imagery": {
+    "_action": "Every <img> on the page currently points at assets/img/placeholder.svg. Replace with real photographs.",
+    "needed": [
+      "Hero: a wide shot of the building entrance or a classroom in use",
+      "Kindergarten: children at a table, mid-activity",
+      "Primary: a classroom or a pupil at the board",
+      "Pottery workshop: hands painting clay",
+      "Drawing competition: pupils with their artwork",
+      "Community service: pupils distributing refreshments",
+      "Two or three candid yard/assembly shots for the gallery"
+    ],
+    "rules": [
+      "Written parental consent is required before publishing any identifiable child.",
+      "Export at 1600px wide, WebP, under 200KB each.",
+      "Keep the aspect ratios already set on each <img> so nothing shifts on load."
+    ]
+  }
+}

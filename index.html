@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<!--
+  مؤسسة السنبلة التعليمية — Al-Sunbulah Educational Institution
+  Al-Kifl, Babil, Iraq
+
+  Arabic (rtl) is the shipped default and renders fully without JavaScript.
+  Every translatable node carries data-ar / data-en; assets/js/main.js swaps them.
+
+  BEFORE LAUNCH: read CONTENT-BRIEF.md — items marked [CONFIRM] and [PLACEHOLDER]
+  must be verified with the school. Nothing on this page should be invented.
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مؤسسة السنبلة التعليمية — روضة ومدرسة ابتدائية أهلية في الكفل، بابل</title>
+
+<meta name="description"
+      data-ar-content="روضة ومدرسة ابتدائية أهلية مختلطة في الكفل — محافظة بابل. مجازة من مديرية تربية بابل. تعليم متميّز ورعاية للموهبة والسلوك منذ عام 2016."
+      data-en-content="A private, co-educational kindergarten and primary school in Al-Kifl, Babil, Iraq. Licensed by the Babil Directorate of Education. Nurturing learning, talent and character since 2016."
+      content="روضة ومدرسة ابتدائية أهلية مختلطة في الكفل — محافظة بابل. مجازة من مديرية تربية بابل. تعليم متميّز ورعاية للموهبة والسلوك منذ عام 2016.">
+
+<meta property="og:title" content="مؤسسة السنبلة التعليمية — روضة ومدرسة ابتدائية">
+<meta property="og:description" content="تعليمٌ متميّز… ومستقبلٌ مشرق. الكفل — محافظة بابل.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_IQ">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#35513A">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Arms the scroll-reveal hidden state ONLY when JS is running, plus a 4s
+     failsafe so a missing or broken main.js can never leave content invisible. -->
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    setTimeout(function () { d.classList.add('reveal-all'); }, 4000);
+  })();
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2335513A'/%3E%3Cg fill='none' stroke='%23E9B85F' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='M12 5v14M12 8l-3.2-2M12 8l3.2-2M12 12l-3.2-2M12 12l3.2-2M12 16l-3.2-2M12 16l3.2-2'/%3E%3C/g%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "School",
+  "name": "مؤسسة السنبلة التعليمية",
+  "alternateName": "Al-Sunbulah Educational Institution",
+  "description": "روضة ومدرسة ابتدائية أهلية مختلطة في الكفل، محافظة بابل، العراق.",
+  "foundingDate": "2016",
+  "telephone": "+9647700097426",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "الكفل",
+    "addressRegion": "بابل",
+    "addressCountry": "IQ"
+  },
+  "sameAs": [
+    "https://www.facebook.com/SunbulahSchool/",
+    "https://www.instagram.com/sanbula2016/"
+  ]
+}
+</script>
+</head>
+
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main"
+   data-ar="تخطَّ إلى المحتوى الرئيسي" data-en="Skip to main content">تخطَّ إلى المحتوى الرئيسي</a>
+
+<!-- ================= SVG icon sprite ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wheat" viewBox="0 0 24 24">
+      <path d="M12 3v18M12 6.4 8.4 4M12 6.4 15.6 4M12 11.2 8.4 8.8M12 11.2l3.6-2.4M12 16 8.4 13.6M12 16l3.6-2.4"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3.2 20 6v6c0 4.4-3.2 7.6-8 8.8C7.2 19.6 4 16.4 4 12V6z"/><path d="m9 12 2.2 2.2L15.4 10"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M6.2 3.5h3.1l1.6 4-2 1.3a12 12 0 0 0 5.3 5.3l1.3-2 4 1.6v3.1a1.8 1.8 0 0 1-2 1.8A15.8 15.8 0 0 1 4.4 5.5a1.8 1.8 0 0 1 1.8-2z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4V12l3 1.8"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.2a5.6 5.6 0 0 1 11 0"/>
+      <path d="M16 5.2a3.2 3.2 0 0 1 0 5.9M17.6 14.4a5.6 5.6 0 0 1 3 4.8"/>
+    </symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24">
+      <path d="M12 3.4a8.6 8.6 0 0 0 0 17.2c1.3 0 2-.9 2-1.9 0-1.3-1.1-1.7-1.1-2.7 0-.8.7-1.4 1.6-1.4h1.6a4.3 4.3 0 0 0 4.3-4.3c0-3.8-3.7-6.9-8.4-6.9z"/>
+      <circle cx="8" cy="10.2" r="1.05"/><circle cx="12" cy="7.8" r="1.05"/><circle cx="16" cy="10.2" r="1.05"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 19.6S3.9 14.9 3.9 9.4A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 8.1 2.2c0 5.5-8.1 10.2-8.1 10.2z"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24">
+      <path d="M4 4.6h5.2A2.8 2.8 0 0 1 12 7.4v12a2.2 2.2 0 0 0-2.2-2.2H4z"/>
+      <path d="M20 4.6h-5.2A2.8 2.8 0 0 0 12 7.4v12a2.2 2.2 0 0 1 2.2-2.2H20z"/>
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24">
+      <path d="M12 20.5v-7.2"/><path d="M12 13.3C12 9.6 9 7.4 5.4 7.4c0 3.7 2.6 5.9 6.6 5.9z"/>
+      <path d="M12 13.3c0-3.3 2.6-5.6 6.6-5.6 0 3.6-3 5.6-6.6 5.6z"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M20 13.4c0 2.4-2 4.3-4.5 4.3H9.8L5 20.4l1-3.3A4.3 4.3 0 0 1 4 13.4V8.3C4 5.9 6 4 8.5 4h7C18 4 20 5.9 20 8.3z"/>
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2"/>
+      <path d="M12 3.4a13 13 0 0 1 0 17.2 13 13 0 0 1 0-17.2z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4a8 8 0 1 1 14.6-4.3z"/>
+      <path d="M9.2 8.5c.3-.1.6 0 .8.4l.6 1.3c.1.3 0 .5-.2.7l-.4.4c.5 1 1.3 1.8 2.3 2.3l.4-.4c.2-.2.4-.3.7-.2l1.3.6c.4.2.5.5.4.8a2 2 0 0 1-2.4 1.2 7.4 7.4 0 0 1-4.6-4.6 2 2 0 0 1 1.1-2.5z"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path d="M14.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3A20 20 0 0 0 15.4 4c-2.3 0-3.9 1.4-3.9 4.1v2.3H8.9v3h2.6V21z"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3.6" y="3.6" width="16.8" height="16.8" rx="5"/>
+      <circle cx="12" cy="12" r="3.7"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= Top bar ================= -->
+<div class="topbar">
+  <div class="container topbar-in">
+    <span data-ar="مجازة من مديرية تربية بابل" data-en="Licensed by the Babil Directorate of Education">مجازة من مديرية تربية بابل</span>
+    <div class="topbar-links">
+      <a href="tel:+9647700097426">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+        <span class="ltr">0770 009 7426</span>
+      </a>
+      <a href="#contact">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+        <span data-ar="الكفل — بابل" data-en="Al-Kifl, Babil">الكفل — بابل</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= Header ================= -->
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="التنقل الرئيسي"
+         data-ar-aria="التنقل الرئيسي" data-en-aria="Main navigation">
+      <a class="brand" href="#top">
+        <svg class="brand-mark ico" aria-hidden="true" focusable="false"><use href="#i-wheat"/></svg>
+        <span class="brand-text">
+          <span class="brand-name" data-ar="السنبلة" data-en="Sunbulah">السنبلة</span>
+          <span class="brand-sub" data-ar="روضة ومدرسة ابتدائية" data-en="Kindergarten &amp; Primary">روضة ومدرسة ابتدائية</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#story"      data-ar="من نحن"     data-en="About">من نحن</a>
+        <a href="#stages"     data-ar="المراحل"    data-en="Stages">المراحل</a>
+        <a href="#why"        data-ar="لماذا السنبلة" data-en="Why us">لماذا السنبلة</a>
+        <a href="#activities" data-ar="أنشطتنا"    data-en="Activities">أنشطتنا</a>
+        <a href="#admissions" data-ar="التسجيل"    data-en="Admissions">التسجيل</a>
+        <a href="#faq"        data-ar="أسئلة شائعة" data-en="FAQ">أسئلة شائعة</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" type="button" data-lang-toggle aria-pressed="false"
+                aria-label="Switch to English">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>
+          <span data-lang-next>English</span>
+        </button>
+
+        <a class="btn btn-primary nav-cta" href="#admissions"
+           data-ar="سجّل طفلك" data-en="Enrol your child">سجّل طفلك</a>
+
+        <button class="menu-btn" type="button" data-menu-btn
+                aria-expanded="false" aria-controls="mobile-menu"
+                aria-label="فتح القائمة"
+                data-ar-label="فتح القائمة" data-en-label="Open menu">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="container">
+      <a href="#story"      data-ar="من نحن"       data-en="About">من نحن</a>
+      <a href="#stages"     data-ar="المراحل"      data-en="Stages">المراحل</a>
+      <a href="#why"        data-ar="لماذا السنبلة" data-en="Why us">لماذا السنبلة</a>
+      <a href="#activities" data-ar="أنشطتنا"      data-en="Activities">أنشطتنا</a>
+      <a href="#day"        data-ar="يومنا"        data-en="Our day">يومنا</a>
+      <a href="#admissions" data-ar="التسجيل"      data-en="Admissions">التسجيل</a>
+      <a href="#faq"        data-ar="أسئلة شائعة"  data-en="FAQ">أسئلة شائعة</a>
+      <a href="#contact"    data-ar="تواصل معنا"   data-en="Contact">تواصل معنا</a>
+      <a class="btn btn-primary" href="#admissions"
+         data-ar="سجّل طفلك" data-en="Enrol your child">سجّل طفلك</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-ar="الكفل — محافظة بابل — منذ 2016"
+            data-en="Al-Kifl, Babil — since 2016">الكفل — محافظة بابل — منذ 2016</span>
+
+      <h1 data-ar="من بذرةٍ صغيرة… تنمو &lt;span class=&quot;accent&quot;&gt;سنبلة&lt;/span&gt;"
+          data-en="From one small seed, a &lt;span class=&quot;accent&quot;&gt;whole harvest&lt;/span&gt;">من بذرةٍ صغيرة… تنمو <span class="accent">سنبلة</span></h1>
+
+      <p class="hero-lede"
+         data-ar="روضة ومدرسة ابتدائية أهلية مختلطة في الكفل. نرعى فضول الطفل، ونبني أساساً متيناً في العلم والخُلق، بصبرٍ ويدٍ حانية."
+         data-en="A private, co-educational kindergarten and primary school in Al-Kifl. We tend each child's curiosity and build firm foundations in learning and character — patiently, and with a gentle hand.">روضة ومدرسة ابتدائية أهلية مختلطة في الكفل. نرعى فضول الطفل، ونبني أساساً متيناً في العلم والخُلق، بصبرٍ ويدٍ حانية.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#admissions">
+          <span data-ar="ابدأ التسجيل" data-en="Start enrolment">ابدأ التسجيل</span>
+          <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>
+          <span data-ar="تحدّث معنا على واتساب" data-en="Chat on WhatsApp">تحدّث معنا على واتساب</span>
+        </a>
+      </div>
+
+      <ul class="trust">
+        <li class="chip">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+          <span data-ar="مجازة رسمياً من تربية بابل" data-en="Officially licensed by Babil Education">مجازة رسمياً من تربية بابل</span>
+        </li>
+        <li class="chip">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sprout"/></svg>
+          <span data-ar="روضة منذ 2016" data-en="Kindergarten since 2016">روضة منذ 2016</span>
+        </li>
+        <li class="chip">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg>
+          <span data-ar="ابتدائية منذ 2019" data-en="Primary since 2019">ابتدائية منذ 2019</span>
+        </li>
+        <li class="chip">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg>
+          <span data-ar="تعليم مختلط" data-en="Co-educational">تعليم مختلط</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-art reveal">
+      <svg class="hero-wheat ico" aria-hidden="true" focusable="false"><use href="#i-wheat"/></svg>
+      <div class="hero-art-main">
+        <!-- REPLACE: wide shot of the school entrance or a classroom in use -->
+        <img src="assets/img/placeholder.svg" width="800" height="600"
+             data-replace="hero — school entrance or classroom, 1600px wide WebP"
+             alt="تلاميذ مؤسسة السنبلة التعليمية داخل الصف"
+             data-ar-alt="تلاميذ مؤسسة السنبلة التعليمية داخل الصف"
+             data-en-alt="Pupils of Al-Sunbulah Educational Institution in class">
+      </div>
+      <div class="hero-badge">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+        <span>
+          <b data-ar="مرحلتان" data-en="Two stages">مرحلتان</b>
+          <span data-ar="روضة وابتدائية تحت سقفٍ واحد"
+                data-en="Kindergarten and primary under one roof">روضة وابتدائية تحت سقفٍ واحد</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Stats ================= -->
+<section class="band-dark" aria-label="أرقام عن المدرسة"
+         data-ar-aria="أرقام عن المدرسة" data-en-aria="School at a glance">
+  <div class="container" style="padding-block:0">
+    <ul class="stats">
+      <li class="stat"><b>2016</b><span data-ar="سنة التأسيس" data-en="Founded">سنة التأسيس</span></li>
+      <li class="stat"><b>2</b><span data-ar="مرحلة تعليمية" data-en="Educational stages">مرحلة تعليمية</span></li>
+      <li class="stat"><b>6</b><span data-ar="صفوف ابتدائية" data-en="Primary grades">صفوف ابتدائية</span></li>
+      <li class="stat"><b>3–12</b><span data-ar="الأعمار المستقبَلة" data-en="Ages welcomed">الأعمار المستقبَلة</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= Story ================= -->
+<section class="section" id="story">
+  <div class="container story-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-ar="من نحن" data-en="About us">من نحن</span>
+      <h2 class="section-title" data-ar="لماذا سمّينا أنفسنا السنبلة"
+          data-en="Why we call ourselves Sunbulah">لماذا سمّينا أنفسنا السنبلة</h2>
+      <div class="wheat-rule" aria-hidden="true"></div>
+      <p class="story-quote"
+         data-ar="«حبّةٌ واحدة، إذا وجدت تربةً طيبة ويداً صابرة، أنبتت سبع سنابل.»"
+         data-en="“One grain, given good soil and a patient hand, brings forth seven ears.”">«حبّةٌ واحدة، إذا وجدت تربةً طيبة ويداً صابرة، أنبتت سبع سنابل.»</p>
+    </div>
+
+    <div class="story-body reveal">
+      <p data-ar="اسمنا ليس مصادفة. السنبلة حبّةٌ زُرعت في الأرض، فصبرت، ثم أنبتت سبع سنابل. وهكذا نرى كل طفلٍ يدخل من بابنا: بذرةٌ تحتاج تربةً طيبة، وماءً في وقته، ويداً صبورة تنتظر الموسم دون استعجال."
+         data-en="Our name is no accident. A sunbulah is an ear of wheat — one grain planted in the earth, which waited, and then brought forth seven ears. That is how we see every child who walks through our gate: a seed that needs good soil, water at the right moment, and a patient hand willing to wait for the season.">اسمنا ليس مصادفة. السنبلة حبّةٌ زُرعت في الأرض، فصبرت، ثم أنبتت سبع سنابل. وهكذا نرى كل طفلٍ يدخل من بابنا: بذرةٌ تحتاج تربةً طيبة، وماءً في وقته، ويداً صبورة تنتظر الموسم دون استعجال.</p>
+
+      <p data-ar="بدأنا روضةً عام 2016، ثم فتحنا المرحلة الابتدائية عام 2019، وما زلنا نعمل بالفكرة نفسها: أن التعليم ليس حشواً للذاكرة، بل زراعة. نحن لا نزرع المعلومة وحدها — نزرع الفضول، والخُلق، والثقة بالنفس."
+         data-en="We opened as a kindergarten in 2016 and added the primary school in 2019, and we still work from the same idea: that education is not the filling of a memory but the tending of a field. We do not plant knowledge alone — we plant curiosity, character, and confidence.">بدأنا روضةً عام 2016، ثم فتحنا المرحلة الابتدائية عام 2019، وما زلنا نعمل بالفكرة نفسها: أن التعليم ليس حشواً للذاكرة، بل زراعة. نحن لا نزرع المعلومة وحدها — نزرع الفضول، والخُلق، والثقة بالنفس.</p>
+
+      <p data-ar="ولأن المدرسة جزءٌ من مجتمعها، يخرج تلاميذنا إلى الناس: يشاركون في خدمة الزائرين، وفي المسابقات الفنية، وفي مناسبات مدينتهم. نريدهم أن يتعلّموا العطاء بأيديهم، لا من كتاب."
+         data-en="And because a school belongs to its community, our pupils go out into it: serving visitors to the shrine, entering art competitions, taking part in the life of their town. We want them to learn generosity with their hands, not from a textbook.">ولأن المدرسة جزءٌ من مجتمعها، يخرج تلاميذنا إلى الناس: يشاركون في خدمة الزائرين، وفي المسابقات الفنية، وفي مناسبات مدينتهم. نريدهم أن يتعلّموا العطاء بأيديهم، لا من كتاب.</p>
+
+      <div class="sign">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-sprout"/></svg>
+        <span>
+          <!-- [CONFIRM] Replace with the principal's actual name and title -->
+          <b data-ar="إدارة مؤسسة السنبلة التعليمية"
+             data-en="The management of Al-Sunbulah">إدارة مؤسسة السنبلة التعليمية</b>
+          <span data-ar="الكفل — محافظة بابل" data-en="Al-Kifl, Babil Governorate">الكفل — محافظة بابل</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Stages ================= -->
+<section class="section band-2" id="stages">
+  <div class="container">
+    <div class="reveal" style="max-width:720px">
+      <span class="eyebrow" data-ar="المراحل الدراسية" data-en="Our stages">المراحل الدراسية</span>
+      <h2 class="section-title" data-ar="مرحلتان، ومسارٌ واحد متّصل"
+          data-en="Two stages, one continuous path">مرحلتان، ومسارٌ واحد متّصل</h2>
+      <p class="section-lede"
+         data-ar="يبدأ الطفل معنا في الروضة وهو يتعلّم كيف يمسك القلم، ويغادرنا في السادس الابتدائي وهو يعرف كيف يفكّر. المسار واحد، والوجوه مألوفة طوال الطريق."
+         data-en="A child starts with us learning how to hold a pencil, and leaves us in grade six knowing how to think. It is one path, with familiar faces the whole way along it.">يبدأ الطفل معنا في الروضة وهو يتعلّم كيف يمسك القلم، ويغادرنا في السادس الابتدائي وهو يعرف كيف يفكّر. المسار واحد، والوجوه مألوفة طوال الطريق.</p>
+    </div>
+
+    <div class="stages" style="margin-block-start:var(--sp-8)">
+      <article class="stage stage-kg reveal">
+        <div class="stage-media">
+          <!-- REPLACE: kindergarten children mid-activity -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="kindergarten — children at a table, mid-activity"
+               alt="أطفال الروضة أثناء نشاط تعليمي"
+               data-ar-alt="أطفال الروضة أثناء نشاط تعليمي"
+               data-en-alt="Kindergarten children during a learning activity">
+        </div>
+        <div class="stage-body">
+          <span class="stage-since" data-ar="منذ 2016" data-en="Since 2016">منذ 2016</span>
+          <h3 data-ar="الروضة" data-en="Kindergarten">الروضة</h3>
+          <p class="stage-ages" data-ar="من 3 إلى 5 سنوات" data-en="Ages 3 to 5">من 3 إلى 5 سنوات</p>
+          <ul>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="التعلّم باللعب والاكتشاف" data-en="Learning through play and discovery">التعلّم باللعب والاكتشاف</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="الحروف والأرقام والمهارات الأولى" data-en="Letters, numbers and first skills">الحروف والأرقام والمهارات الأولى</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="الفنون والأشغال اليدوية" data-en="Art and hands-on making">الفنون والأشغال اليدوية</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="بناء السلوك والاعتماد على النفس" data-en="Building behaviour and independence">بناء السلوك والاعتماد على النفس</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="stage stage-pr reveal">
+        <div class="stage-media">
+          <!-- REPLACE: primary classroom or a pupil at the board -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="primary — classroom or pupil at the board"
+               alt="تلاميذ المرحلة الابتدائية داخل الصف"
+               data-ar-alt="تلاميذ المرحلة الابتدائية داخل الصف"
+               data-en-alt="Primary pupils in the classroom">
+        </div>
+        <div class="stage-body">
+          <span class="stage-since" data-ar="منذ 2019" data-en="Since 2019">منذ 2019</span>
+          <h3 data-ar="الابتدائية" data-en="Primary school">الابتدائية</h3>
+          <p class="stage-ages" data-ar="من الصف الأول إلى السادس" data-en="Grades 1 to 6">من الصف الأول إلى السادس</p>
+          <ul>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="المنهج الوزاري العراقي المعتمد" data-en="The official Iraqi national curriculum">المنهج الوزاري العراقي المعتمد</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تقوية في اللغة الإنكليزية والرياضيات" data-en="Extra support in English and mathematics">تقوية في اللغة الإنكليزية والرياضيات</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="صفوف بأعداد محدودة ومتابعة فردية" data-en="Small classes with individual attention">صفوف بأعداد محدودة ومتابعة فردية</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تقارير دورية لولي الأمر" data-en="Regular progress reports for parents">تقارير دورية لولي الأمر</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Why us ================= -->
+<section class="section band-dark" id="why">
+  <div class="container">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow" data-ar="لماذا السنبلة" data-en="Why Sunbulah">لماذا السنبلة</span>
+      <h2 class="section-title" data-ar="ما الذي يجعل يوم طفلك هنا مختلفاً"
+          data-en="What makes your child's day here different">ما الذي يجعل يوم طفلك هنا مختلفاً</h2>
+    </div>
+
+    <div class="pillars" style="margin-block-start:var(--sp-8)">
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg></span>
+        <div>
+          <h3 data-ar="صفوف بأعداد محدودة" data-en="Small class sizes">صفوف بأعداد محدودة</h3>
+          <p data-ar="عدد التلاميذ في الصف محدود، حتى تعرف المعلمة كل طفل باسمه وبمستواه، لا برقمه في السجل."
+             data-en="Class numbers are kept low, so a teacher knows every child by name and by level — not by a number in a register.">عدد التلاميذ في الصف محدود، حتى تعرف المعلمة كل طفل باسمه وبمستواه، لا برقمه في السجل.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-book"/></svg></span>
+        <div>
+          <h3 data-ar="كادر تعليمي مؤهل" data-en="Qualified teaching staff">كادر تعليمي مؤهل</h3>
+          <p data-ar="ملاكٌ تربوي مختص في تعليم المرحلة الأساسية، يتعامل مع الطفل بلغته وبعمره، لا بلغة الكبار."
+             data-en="Teachers trained for the early years, who meet a child at their own age and in their own language — not in the language of adults.">ملاكٌ تربوي مختص في تعليم المرحلة الأساسية، يتعامل مع الطفل بلغته وبعمره، لا بلغة الكبار.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg></span>
+        <div>
+          <h3 data-ar="متابعة يومية مع الأهل" data-en="Daily contact with parents">متابعة يومية مع الأهل</h3>
+          <p data-ar="لا تنتظر نهاية الفصل لتعرف. تصلك أخبار طفلك أولاً بأول، وباب الإدارة مفتوح للسؤال."
+             data-en="You don't wait until the end of term to find out. News of your child reaches you as it happens, and the office door is open.">لا تنتظر نهاية الفصل لتعرف. تصلك أخبار طفلك أولاً بأول، وباب الإدارة مفتوح للسؤال.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-palette"/></svg></span>
+        <div>
+          <h3 data-ar="أنشطة فنية ومهارية" data-en="Arts and skills activities">أنشطة فنية ومهارية</h3>
+          <p data-ar="الرسم على الفخار، المسابقات الفنية، المعارض. الموهبة عندنا ليست حصةً إضافية، بل جزءٌ من الأسبوع."
+             data-en="Pottery painting, art competitions, exhibitions. Here talent is not an optional extra lesson — it is part of the week.">الرسم على الفخار، المسابقات الفنية، المعارض. الموهبة عندنا ليست حصةً إضافية، بل جزءٌ من الأسبوع.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg></span>
+        <div>
+          <h3 data-ar="تربية على القيم والسلوك" data-en="Values and character">تربية على القيم والسلوك</h3>
+          <p data-ar="نحرص أن يخرج التلميذ مؤدّباً كما يخرج متعلّماً: يحترم، ويساعد، ويعرف قيمة التعب."
+             data-en="We care that a pupil leaves us well-mannered as much as well-taught: respectful, helpful, and aware of what effort is worth.">نحرص أن يخرج التلميذ مؤدّباً كما يخرج متعلّماً: يحترم، ويساعد، ويعرف قيمة التعب.</p>
+        </div>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span>
+        <div>
+          <h3 data-ar="بيئة آمنة ونظيفة" data-en="A safe, clean environment">بيئة آمنة ونظيفة</h3>
+          <p data-ar="مبنى مجاز ومتابَع، وإشراف على التلاميذ من لحظة الوصول حتى تسليمهم لذويهم."
+             data-en="A licensed, maintained building, with pupils supervised from the moment they arrive until they are handed back to their family.">مبنى مجاز ومتابَع، وإشراف على التلاميذ من لحظة الوصول حتى تسليمهم لذويهم.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Activities ================= -->
+<section class="section" id="activities">
+  <div class="container">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow" data-ar="من حياتنا المدرسية" data-en="School life">من حياتنا المدرسية</span>
+      <h2 class="section-title" data-ar="ما نفعله خارج الكتاب"
+          data-en="What we do beyond the textbook">ما نفعله خارج الكتاب</h2>
+      <p class="section-lede"
+         data-ar="هذه ليست أنشطةً على الورق. هذه أشياء فعلها تلاميذنا هذا العام."
+         data-en="These are not activities on paper. These are things our pupils actually did this year.">هذه ليست أنشطةً على الورق. هذه أشياء فعلها تلاميذنا هذا العام.</p>
+    </div>
+
+    <div class="activities" style="margin-block-start:var(--sp-8)">
+      <article class="activity reveal">
+        <div class="activity-media">
+          <!-- REPLACE: hands painting clay pottery -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="pottery workshop — hands painting clay"
+               alt="تلاميذ يرسمون على الفخار"
+               data-ar-alt="تلاميذ يرسمون على الفخار"
+               data-en-alt="Pupils painting on pottery">
+        </div>
+        <h3 data-ar="الرسم على الفخار" data-en="Pottery painting">الرسم على الفخار</h3>
+        <p data-ar="تجربة فنية ممتعة تجمع بين الإبداع والتعلّم واكتشاف المواهب، وتنمّي المهارة اليدوية والتعبير الحر."
+           data-en="A joyful hands-on workshop bringing together creativity, learning and talent — building fine motor skill and free expression.">تجربة فنية ممتعة تجمع بين الإبداع والتعلّم واكتشاف المواهب، وتنمّي المهارة اليدوية والتعبير الحر.</p>
+      </article>
+
+      <article class="activity reveal">
+        <div class="activity-media">
+          <!-- REPLACE: pupils with their competition artwork -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="drawing competition — pupils with their artwork"
+               alt="تلاميذ مشاركون في مسابقة الرسم للموهوبين"
+               data-ar-alt="تلاميذ مشاركون في مسابقة الرسم للموهوبين"
+               data-en-alt="Pupils taking part in the gifted young artists' competition">
+        </div>
+        <h3 data-ar="مسابقة الرسم للموهوبين" data-en="Gifted young artists">مسابقة الرسم للموهوبين</h3>
+        <p data-ar="شاركنا بنخبةٍ من تلاميذنا المبدعين، عبّروا بريشتهم عن جمال أفكارهم وبراءة أحلامهم."
+           data-en="We took part with a group of our most creative pupils, who put the beauty of their ideas and the innocence of their dreams onto the page.">شاركنا بنخبةٍ من تلاميذنا المبدعين، عبّروا بريشتهم عن جمال أفكارهم وبراءة أحلامهم.</p>
+      </article>
+
+      <article class="activity reveal">
+        <div class="activity-media">
+          <!-- REPLACE: pupils distributing refreshments to visitors -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="community service — pupils distributing refreshments"
+               alt="تلاميذ يشاركون في خدمة الزائرين"
+               data-ar-alt="تلاميذ يشاركون في خدمة الزائرين"
+               data-en-alt="Pupils helping serve visitors">
+        </div>
+        <h3 data-ar="خدمة الزائرين" data-en="Serving the pilgrims">خدمة الزائرين</h3>
+        <p data-ar="يشارك تلاميذنا في خدمة الزائرين وتوزيع الضيافة، فيتعلّمون العطاء بأيديهم لا بالكلام."
+           data-en="Our pupils help serve visitors and offer refreshments — learning generosity with their hands, not in words.">يشارك تلاميذنا في خدمة الزائرين وتوزيع الضيافة، فيتعلّمون العطاء بأيديهم لا بالكلام.</p>
+      </article>
+
+      <article class="activity reveal">
+        <div class="activity-media">
+          <!-- REPLACE: World Children's Day celebration -->
+          <img src="assets/img/placeholder.svg" width="800" height="600" loading="lazy"
+               data-replace="World Children's Day celebration"
+               alt="احتفالية يوم الطفل العالمي في المدرسة"
+               data-ar-alt="احتفالية يوم الطفل العالمي في المدرسة"
+               data-en-alt="World Children's Day celebration at the school">
+        </div>
+        <h3 data-ar="يوم الطفل العالمي" data-en="World Children's Day">يوم الطفل العالمي</h3>
+        <p data-ar="احتفالية سنوية بالطفولة، لأن أطفال العراق هم الأمل والبسمة والمستقبل."
+           data-en="An annual celebration of childhood — because Iraq's children are its hope, its smile and its future.">احتفالية سنوية بالطفولة، لأن أطفال العراق هم الأمل والبسمة والمستقبل.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= A day at Sunbulah =================
+     [PLACEHOLDER] The times below are indicative only.
+     Replace with the real timetable or delete this whole section.
+-->
+<section class="section band-2" id="day">
+  <div class="container story-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-ar="يومٌ في السنبلة" data-en="A day at Sunbulah">يومٌ في السنبلة</span>
+      <h2 class="section-title" data-ar="كيف يمرّ اليوم الدراسي"
+          data-en="How the school day runs">كيف يمرّ اليوم الدراسي</h2>
+      <p class="section-lede"
+         data-ar="جدولٌ ثابت يعرفه الطفل فيطمئن إليه، وفيه متّسعٌ للحركة والفن والراحة — لا حصصٌ متتالية بلا نفَس."
+         data-en="A steady rhythm a child can rely on, with room in it for movement, art and rest — not one lesson after another without a breath.">جدولٌ ثابت يعرفه الطفل فيطمئن إليه، وفيه متّسعٌ للحركة والفن والراحة — لا حصصٌ متتالية بلا نفَس.</p>
+      <p class="form-note" style="margin-block-start:var(--sp-5)"
+         data-ar="* الأوقات تقريبية وقد تختلف بين الروضة والابتدائية."
+         data-en="* Times are indicative and may differ between kindergarten and primary.">* الأوقات تقريبية وقد تختلف بين الروضة والابتدائية.</p>
+    </div>
+
+    <div class="reveal">
+      <ul class="timeline">
+        <li class="tl-item"><span class="tl-time">7:45</span>
+          <span class="tl-label" data-ar="الاصطفاف الصباحي" data-en="Morning assembly">الاصطفاف الصباحي</span></li>
+        <li class="tl-item"><span class="tl-time">8:00</span>
+          <span class="tl-label" data-ar="الحصص الأساسية" data-en="Core lessons">الحصص الأساسية</span></li>
+        <li class="tl-item"><span class="tl-time">10:00</span>
+          <span class="tl-label" data-ar="الفسحة والوجبة" data-en="Break and snack">الفسحة والوجبة</span></li>
+        <li class="tl-item"><span class="tl-time">10:30</span>
+          <span class="tl-label" data-ar="اللغة الإنكليزية والرياضيات" data-en="English and mathematics">اللغة الإنكليزية والرياضيات</span></li>
+        <li class="tl-item"><span class="tl-time">12:00</span>
+          <span class="tl-label" data-ar="نشاط فني أو مهاري" data-en="Arts or skills activity">نشاط فني أو مهاري</span></li>
+        <li class="tl-item"><span class="tl-time">13:00</span>
+          <span class="tl-label" data-ar="المراجعة والانصراف" data-en="Review and dismissal">المراجعة والانصراف</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Admissions ================= -->
+<section class="section" id="admissions">
+  <div class="container">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow" data-ar="التسجيل" data-en="Admissions">التسجيل</span>
+      <h2 class="section-title" data-ar="خمس خطوات، ويبدأ عامه معنا"
+          data-en="Five steps, and their year begins">خمس خطوات، ويبدأ عامه معنا</h2>
+      <p class="section-lede"
+         data-ar="التسجيل مفتوح للروضة وللصفوف الابتدائية. تفضّل بزيارتنا — نحن نفضّل أن تروا المكان بأنفسكم قبل أن تقرروا."
+         data-en="Enrolment is open for kindergarten and for the primary grades. Come and visit — we would rather you saw the place for yourself before you decide.">التسجيل مفتوح للروضة وللصفوف الابتدائية. تفضّل بزيارتنا — نحن نفضّل أن تروا المكان بأنفسكم قبل أن تقرروا.</p>
+    </div>
+
+    <div class="adm-grid" style="margin-block-start:var(--sp-8)">
+      <div class="reveal">
+        <ol class="steps">
+          <li class="step"><p data-ar="تواصل معنا هاتفياً أو عبر واتساب."
+              data-en="Call us or send a message on WhatsApp.">تواصل معنا هاتفياً أو عبر واتساب.</p></li>
+          <li class="step"><p data-ar="زُر المدرسة وخُذ جولةً تعريفية مع الإدارة."
+              data-en="Visit the school and take a tour with the management.">زُر المدرسة وخُذ جولةً تعريفية مع الإدارة.</p></li>
+          <li class="step"><p data-ar="قدّم مستندات التسجيل المطلوبة."
+              data-en="Submit the required enrolment documents.">قدّم مستندات التسجيل المطلوبة.</p></li>
+          <li class="step"><p data-ar="لقاءٌ بسيط مع الطفل لتحديد المستوى المناسب."
+              data-en="A short, friendly meeting with the child to find the right level.">لقاءٌ بسيط مع الطفل لتحديد المستوى المناسب.</p></li>
+          <li class="step"><p data-ar="إكمال التسجيل واستلام الجدول والزي المدرسي."
+              data-en="Complete the enrolment and collect the timetable and uniform.">إكمال التسجيل واستلام الجدول والزي المدرسي.</p></li>
+        </ol>
+
+        <!-- [CONFIRM] Verify this document list with the school office -->
+        <div class="docs" style="margin-block-start:var(--sp-7)">
+          <h3 data-ar="المستندات المطلوبة" data-en="Documents you'll need">المستندات المطلوبة</h3>
+          <ul>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="إخراج قيد أو هوية الأحوال المدنية للطفل" data-en="The child's civil ID or birth registration extract">إخراج قيد أو هوية الأحوال المدنية للطفل</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="البطاقة الوطنية لولي الأمر" data-en="The parent's national ID card">البطاقة الوطنية لولي الأمر</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="صور شخصية حديثة" data-en="Recent passport photographs">صور شخصية حديثة</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="التقرير الصحي وسجل التطعيمات" data-en="Health report and vaccination record">التقرير الصحي وسجل التطعيمات</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="وثيقة النقل من المدرسة السابقة (للصفوف)" data-en="Transfer certificate from the previous school (grades only)">وثيقة النقل من المدرسة السابقة (للصفوف)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 style="font-size:1.45rem" data-ar="اترك بياناتك ونتواصل معك"
+            data-en="Leave your details and we'll be in touch">اترك بياناتك ونتواصل معك</h3>
+        <p class="form-note" style="margin-block-start:var(--sp-2)"
+           data-ar="نردّ عادةً خلال يوم عمل واحد."
+           data-en="We usually reply within one working day.">نردّ عادةً خلال يوم عمل واحد.</p>
+
+        <!-- No backend yet: this hands off to WhatsApp. See README. -->
+        <form class="form" id="enquiry-form" data-whatsapp="9647700097426" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name" data-ar="اسم ولي الأمر" data-en="Parent's name">اسم ولي الأمر</label>
+              <input id="f-name" name="name" type="text" required autocomplete="name"
+                     aria-describedby="e-name"
+                     placeholder="مثال: أم محمد"
+                     data-ar-placeholder="مثال: أم محمد" data-en-placeholder="e.g. Umm Mohammed">
+              <span class="err" id="e-name" data-ar="يرجى كتابة الاسم."
+                    data-en="Please enter a name.">يرجى كتابة الاسم.</span>
+            </div>
+
+            <div class="field">
+              <label for="f-phone" data-ar="رقم الهاتف" data-en="Phone number">رقم الهاتف</label>
+              <input id="f-phone" name="phone" type="tel" required inputmode="tel"
+                     autocomplete="tel" pattern="[0-9+\s-]{10,}" dir="ltr"
+                     aria-describedby="e-phone"
+                     placeholder="07XX XXX XXXX">
+              <span class="err" id="e-phone" data-ar="يرجى كتابة رقم هاتف صحيح."
+                    data-en="Please enter a valid phone number.">يرجى كتابة رقم هاتف صحيح.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-stage" data-ar="المرحلة المطلوبة" data-en="Stage requested">المرحلة المطلوبة</label>
+            <select id="f-stage" name="stage" required aria-describedby="e-stage">
+              <option value="" data-ar="اختر المرحلة" data-en="Choose a stage">اختر المرحلة</option>
+              <option data-ar="الروضة" data-en="Kindergarten">الروضة</option>
+              <option data-ar="الابتدائية" data-en="Primary school">الابتدائية</option>
+              <option data-ar="غير متأكد بعد" data-en="Not sure yet">غير متأكد بعد</option>
+            </select>
+            <span class="err" id="e-stage" data-ar="يرجى اختيار المرحلة."
+                  data-en="Please choose a stage.">يرجى اختيار المرحلة.</span>
+          </div>
+
+          <div class="field">
+            <label for="f-msg" data-ar="رسالتك" data-en="Your message">رسالتك</label>
+            <textarea id="f-msg" name="message"
+                      placeholder="عمر الطفل، الصف المطلوب، أو أي سؤال لديك…"
+                      data-ar-placeholder="عمر الطفل، الصف المطلوب، أو أي سؤال لديك…"
+                      data-en-placeholder="Your child's age, the grade you want, or any question…"></textarea>
+            <span class="hint" data-ar="اختياري — لكنه يساعدنا على الرد بدقة."
+                  data-en="Optional — but it helps us answer properly.">اختياري — لكنه يساعدنا على الرد بدقة.</span>
+          </div>
+
+          <button class="btn btn-primary" type="submit" style="justify-self:start">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>
+            <span data-ar="أرسل الاستفسار" data-en="Send enquiry">أرسل الاستفسار</span>
+          </button>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+          <p class="form-note"
+             data-ar="بالضغط على الإرسال ستُفتح محادثة واتساب مع إدارة المدرسة وبياناتك مكتوبة مسبقاً."
+             data-en="Pressing send opens a WhatsApp chat with the school office, with your details already written out.">بالضغط على الإرسال ستُفتح محادثة واتساب مع إدارة المدرسة وبياناتك مكتوبة مسبقاً.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section band-2" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center" data-ar="أسئلة شائعة" data-en="Common questions">أسئلة شائعة</span>
+      <h2 class="section-title" data-ar="أسئلة يسألها الأهل عادةً"
+          data-en="What parents usually ask">أسئلة يسألها الأهل عادةً</h2>
+    </div>
+
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="a1" id="q1">
+          <span data-ar="ما الأعمار التي تقبلونها؟" data-en="What ages do you accept?">ما الأعمار التي تقبلونها؟</span>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>
+        </button>
+        <div class="faq-a" id="a1" role="region" aria-labelledby="q1">
+          <p data-ar="نستقبل أطفال الروضة من عمر 3 سنوات، وتلاميذ الابتدائية من الصف الأول حتى السادس."
+             data-en="We welcome kindergarten children from age 3, and primary pupils from grade 1 through grade 6.">نستقبل أطفال الروضة من عمر 3 سنوات، وتلاميذ الابتدائية من الصف الأول حتى السادس.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="a2" id="q2">
+          <span data-ar="هل المدرسة مختلطة؟" data-en="Is the school co-educational?">هل المدرسة مختلطة؟</span>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>
+        </button>
+        <div class="faq-a" id="a2" role="region" aria-labelledby="q2">
+          <p data-ar="نعم، السنبلة مدرسة ابتدائية أهلية مختلطة."
+             data-en="Yes — Sunbulah is a private, co-educational primary school.">نعم، السنبلة مدرسة ابتدائية أهلية مختلطة.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="a3" id="q3">
+          <span data-ar="ما المنهج المعتمد؟" data-en="Which curriculum do you follow?">ما المنهج المعتمد؟</span>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>
+        </button>
+        <div class="faq-a" id="a3" role="region" aria-labelledby="q3">
+          <p data-ar="نعتمد المنهج الوزاري العراقي الرسمي، مع برامج إثرائية في اللغة والرياضيات والأنشطة الفنية."
+             data-en="We follow the official Iraqi national curriculum, with enrichment in language, mathematics and the arts.">نعتمد المنهج الوزاري العراقي الرسمي، مع برامج إثرائية في اللغة والرياضيات والأنشطة الفنية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="a4" id="q4">
+          <span data-ar="هل المدرسة مجازة رسمياً؟" data-en="Is the school officially licensed?">هل المدرسة مجازة رسمياً؟</span>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>
+        </button>
+        <div class="faq-a" id="a4" role="region" aria-labelledby="q4">
+          <p data-ar="نعم، مؤسسة السنبلة التعليمية مجازة من مديرية تربية بابل."
+             data-en="Yes — Al-Sunbulah Educational Institution is licensed by the Babil Directorate of Education.">نعم، مؤسسة السنبلة التعليمية مجازة من مديرية تربية بابل.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="a5" id="q5">
+          <span data-ar="كيف أتابع مستوى ابني؟" data-en="How do I follow my child's progress?">كيف أتابع مستوى ابني؟</span>
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg>
+        </button>
+        <div class="faq-a" id="a5" role="region" aria-labelledby="q5">
+          <p data-ar="عبر التقارير الدورية، واللقاءات المباشرة مع المعلمة، ومجموعة التواصل الخاصة بالصف."
+             data-en="Through regular reports, direct meetings with the class teacher, and your class's messaging group.">عبر التقارير الدورية، واللقاءات المباشرة مع المعلمة، ومجموعة التواصل الخاصة بالصف.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Contact ================= -->
+<section class="section band-lapis" id="contact">
+  <div class="container">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow" data-ar="تواصل معنا" data-en="Get in touch">تواصل معنا</span>
+      <h2 class="section-title" data-ar="بابنا مفتوح — تفضّل بزيارتنا"
+          data-en="Our door is open — come and visit">بابنا مفتوح — تفضّل بزيارتنا</h2>
+    </div>
+
+    <div class="contact-grid" style="margin-block-start:var(--sp-8)">
+      <div class="contact-card reveal">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+        <h3 data-ar="الهاتف وواتساب" data-en="Phone &amp; WhatsApp">الهاتف وواتساب</h3>
+        <a class="contact-num" href="tel:+9647700097426">0770 009 7426</a>
+        <div class="socials">
+          <a href="https://wa.me/9647700097426" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+        <h3 data-ar="الموقع" data-en="Location">الموقع</h3>
+        <!-- [CONFIRM] Add the exact street / nearest landmark, and a Google Maps link -->
+        <p data-ar="الكفل — محافظة بابل — العراق"
+           data-en="Al-Kifl, Babil Governorate, Iraq">الكفل — محافظة بابل — العراق</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>
+        <h3 data-ar="تابعنا" data-en="Follow us">تابعنا</h3>
+        <p data-ar="صور وأخبار أنشطتنا أولاً بأول."
+           data-en="Photos and news from our activities, as they happen.">صور وأخبار أنشطتنا أولاً بأول.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/SunbulahSchool/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-facebook"/></svg>
+          </a>
+          <a href="https://www.instagram.com/sanbula2016/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-instagram"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wheat-rule reveal" aria-hidden="true" style="margin-block-start:var(--sp-8)"></div>
+
+    <div class="reveal" style="text-align:center">
+      <p class="section-lede" style="margin-inline:auto"
+         data-ar="التسجيل مفتوح الآن للعام الدراسي الجديد — الروضة والصفوف الابتدائية."
+         data-en="Enrolment is now open for the new school year — kindergarten and primary grades.">التسجيل مفتوح الآن للعام الدراسي الجديد — الروضة والصفوف الابتدائية.</p>
+      <a class="btn btn-gold" href="https://wa.me/9647700097426" target="_blank" rel="noopener"
+         style="margin-block-start:var(--sp-5)">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"/></svg>
+        <span data-ar="احجز زيارة للمدرسة" data-en="Book a school visit">احجز زيارة للمدرسة</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+  <div class="container footer-in">
+    <p>
+      <span data-ar="© " data-en="© ">© </span><span id="year">2026</span>
+      <span data-ar=" مؤسسة السنبلة التعليمية — الكفل، محافظة بابل، العراق."
+            data-en=" Al-Sunbulah Educational Institution — Al-Kifl, Babil, Iraq."> مؤسسة السنبلة التعليمية — الكفل، محافظة بابل، العراق.</span>
+    </p>
+    <p>
+      <a href="https://www.facebook.com/SunbulahSchool/" target="_blank" rel="noopener">Facebook</a>
+      <span aria-hidden="true"> · </span>
+      <a href="https://www.instagram.com/sanbula2016/" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
