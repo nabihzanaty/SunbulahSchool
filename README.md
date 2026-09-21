@@ -9,7 +9,9 @@ Arabic is the default language and the default reading direction. English is a t
 index.html                              the page
 assets/css/styles.css                   all styling (one sheet, RTL + LTR)
 assets/js/main.js                       language toggle, nav, FAQ, reveal, form
-assets/img/placeholder.svg              stand-in for every photo
+assets/img/placeholder.svg              stand-in for gallery/activity photos
+assets/img/hero-placeholder.svg         dark stand-in for the 3 hero slides
+assets/img/portrait-placeholder.svg     stand-in for the director portrait
 content/content.json                    all copy, AR + EN, with source confidence flags
 design-system/sunbulah-school/MASTER.md design decisions and why
 CONTENT-BRIEF.md                        what's verified vs. what needs the client
@@ -26,11 +28,13 @@ python -m http.server 8000
 ## Before launch
 
 Read **[CONTENT-BRIEF.md](CONTENT-BRIEF.md)**. It marks every claim on the page as confirmed,
-`[CONFIRM]`, or `[PLACEHOLDER]`. Three things must happen first:
+`[CONFIRM]`, or `[PLACEHOLDER]`. Five things must happen first:
 
-1. Replace every photo (search the HTML for `data-replace`) — **with parental consent**
-2. Verify or remove the enrolment document list and the daily timetable
-3. Confirm the address: Facebook says الحلة, Instagram says الكفل
+1. Replace all **16 photos** (search the HTML for `data-replace`) — **with parental consent**
+2. Replace the **event calendar dates** — only World Children's Day (20 Nov) is real
+3. Verify or remove the enrolment document list and the daily timetable
+4. Drop in the **director's photo, name and title** (client is sending the photo)
+5. Confirm the address: Facebook says الحلة, Instagram says الكفل
 
 ---
 
@@ -61,12 +65,19 @@ Two rules:
 
 ### Arabic typography notes
 
-- Body line-height is `1.9`. Arabic needs more leading than Latin — this is the most common
-  mistake in Arabic web type.
-- `letter-spacing` on Arabic is always `0`. Tracking breaks the joined script.
-- Numeric ranges inside RTL text get reordered by the bidi algorithm — `3–12` renders as
-  `12–3`. Isolate them (`direction: ltr; unicode-bidi: isolate`, or the `.ltr` class).
-  `.stat b` and `.contact-num` already do this.
+The type family is **Tajawal** for both scripts; hierarchy comes from weight
+(900 / 800 / 700 / 400), not from a second family.
+
+- Body base `17px`, line-height `1.85`. Arabic needs more leading than Latin — the most
+  common mistake in Arabic web type.
+- `letter-spacing` on Arabic is **always `0`**. Tracking breaks the joined script.
+- **Bidi, the part that bites.** A run of *only* numerals (`3–12`, a time, a phone
+  number) must be isolated with `direction: ltr; unicode-bidi: isolate`, or RTL reorders
+  it to `12–3`. But a run that *mixes* Arabic words with numerals must **not** be forced
+  LTR — that flips the whole phrase (`3 — 5 سنوات` → `سنوات 5 — 3`). Either isolate only
+  the numeric span, or phrase it so numerals sit between strong RTL words
+  (`من 3 إلى 5 سنوات`), which is what the stage pills do.
+  Isolated: `.stat-num`, `.tl-time`, `.contact-num`, `.lightbox-count`.
 
 ---
 
@@ -85,6 +96,33 @@ To send email or hit an API instead, replace the `window.open(...)` call in the 
 in [assets/js/main.js](assets/js/main.js). Inline validation is already wired up
 (`aria-invalid`, per-field error messages, focus moves to the first bad field) and is
 independent of where the data goes.
+
+---
+
+## The interactive pieces
+
+**Hero slider** — three crossfading slides. Crossfade rather than translate, so the
+component needs no mirrored logic in RTL. Inactive slides are `aria-hidden` and their
+links get `tabindex="-1"` so they leave the tab order. Autoplay pauses on hover, on
+focus, and in a background tab, and there is a real pause button (WCAG 2.2.2). Arrow
+keys move between slides, respecting writing direction. Under reduced motion autoplay
+never starts.
+
+**Counters** — `data-count="10"` on a span counts it up once when scrolled into view.
+Add `data-count-plain` for years, or `2016` formats as `2,016`. Optional
+`<span class="suffix">+</span>` sits beside it.
+
+**Gallery** — a spanning mosaic opened by a lightbox. The span order must **tile
+exactly**: `tall, wide, normal, normal, normal, tall, wide, normal` fills a 4-column
+grid's 12 cells with no holes. Change the order and you will get gaps — `grid-auto-flow:
+dense` only rescues the narrower breakpoints. Thumbnails are `<button>`s (they open a
+dialog, they don't navigate); `data-gal` holds the full-size file.
+
+**Lightbox** — `role="dialog"` + `aria-modal`, Tab trapped inside, Escape closes, arrows
+navigate by writing direction, focus returns to the thumbnail, background scroll locked.
+
+**Curve edge** — the divider's own background must match the band **above** it; the SVG
+path is filled with the colour of the band **below**. Reversed, the curve is invisible.
 
 ---
 
@@ -117,9 +155,9 @@ including an explicit list of banned generic-template patterns.
 
 The short version: **سنبلة** means *ear of wheat*, so the whole identity is cultivation — a seed
 tended patiently into a harvest. Colours come from Babil's soil and sky (field green, wheat
-gold, terracotta, lapis) on warm paper, never cool grey. Type is **Amiri** for display and
-**IBM Plex Sans Arabic** for text — one superfamily across both scripts, so switching language
-doesn't change the page's colour or rhythm.
+gold, terracotta, lapis) on warm paper, never cool grey. Type is **Tajawal** across both
+scripts, so switching language changes nothing about the page's colour or rhythm — the
+hierarchy is carried by weight instead, and the character by colour, shape and motion.
 
 > **Note on provenance:** the `ui-ux-pro-max` skill's searchable dataset isn't installed on this
 > machine (only `SKILL.md` synced — no `scripts/` or `references/`). The design decisions follow

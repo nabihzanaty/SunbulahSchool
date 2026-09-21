@@ -46,8 +46,8 @@ social presence:
 ## 3. [CONFIRM] — plausible, but not verified
 
 These are on the page now because a school landing page is useless without them. Each is a
-reasonable inference from an Iraqi private primary school, **not** something the school stated.
-Walk through this list with the principal.
+reasonable inference about an Iraqi private primary school, **not** something the school
+stated. Walk through this list with the principal.
 
 | Item | What the site currently claims | Why it needs checking |
 |---|---|---|
@@ -60,7 +60,10 @@ Walk through this list with the principal.
 | Safety/supervision | Supervised arrival to handover | Confirm the real policy |
 | Enrolment documents | 5-item list (civil ID, parent ID, photos, health report, transfer certificate) | **Highest priority to verify** — parents will act on this |
 | Exact address | Only "الكفل، بابل" | Need street / nearest landmark + a Google Maps pin |
-| Principal's name | Generic "إدارة مؤسسة السنبلة التعليمية" | Replace with a real name and title if they want one |
+| **Director's name, title and photo** | Placeholder portrait + the literal text "اسم المدير / المديرة" | **Client said they will send the photo.** The quoted line beneath it was written by us — confirm or replace. |
+| **Grade groupings (1–3 / 4–6)** | Shown as "الصفوف الأولى" and "الصفوف العليا" | A presentational grouping for the four-card layout, **not** a claim that these are separate programmes. Confirm the school is happy with the framing. |
+| "بلا رسوم إضافية" on the activities card | Claims activities carry no extra fee | We inferred this. If activities are charged, it must change. |
+| "تُحدَّد الرسوم مع بداية العام" | Implies fees are set annually and discussed by phone | Confirm this is how they want fees handled on the site |
 
 ---
 
@@ -68,35 +71,56 @@ Walk through this list with the principal.
 
 | Item | Location | Action |
 |---|---|---|
+| **Event calendar dates** | `#events` section | Six events. **Only World Children's Day (20 November) is a real fixed date.** The other five days/months are invented as a plausible Iraqi school year and must be replaced with the school's actual calendar. An on-page note already says dates are indicative. |
 | **Daily timetable** | `#day` section | Times (7:45–13:00) are invented as a plausible Iraqi school day. Replace with the real timetable, or delete the section. A footnote already says times are indicative. |
-| **School transport FAQ** | `content/content.json` | Written but deliberately left out of the page — we don't know if transport exists. Answer it properly or drop it. |
-| **Parent testimonials** | Not on the page | Deliberately omitted. Collect three real quotes with written permission, or leave the section out. **Do not fabricate these** — it's a legal and reputational risk. |
-| **All photography** | Every `<img>` | Every image points at `assets/img/placeholder.svg`. See §5. |
+| **All photography** | Every image on the page | 3 hero slides + 8 gallery + 4 activity + 1 director = **16 images**. See §5. |
+| **School transport FAQ** | `content/content.json` | Written but deliberately left off the page — we don't know if transport exists. Answer it properly or drop it. |
+| **Parent testimonials** | Not on the page | Deliberately omitted. Collect three real quotes with written permission, or leave the section out. **Do not fabricate these** — it is a legal and reputational risk. |
 | **Email address** | — | None found. Get one, or keep WhatsApp as the only channel (which is honestly fine for this market). |
 
 ---
 
 ## 5. Photography needed
 
-Each `<img>` carries a `data-replace` attribute describing the shot it's waiting for.
-Search the HTML for `data-replace` to find them all.
+**16 images in total.** Each slot carries a `data-replace` attribute describing the shot
+it is waiting for — search the HTML for `data-replace` to find them all.
 
-1. **Hero** — wide shot of the entrance or a classroom in use
-2. **Kindergarten** — children at a table, mid-activity
-3. **Primary** — a classroom, or a pupil at the board
-4. **Pottery workshop** — hands painting clay
-5. **Drawing competition** — pupils with their artwork
-6. **Community service** — pupils distributing refreshments
-7. **World Children's Day** — the celebration
+**Hero slider (3 — landscape, 1920px wide).** These sit behind white text, so they need
+quiet space on one side and must not be busy where the copy falls:
 
-Many of these already exist on the school's Instagram and can be requested at full resolution.
+1. School entrance or a classroom in use
+2. Pupils in a lesson
+3. Pottery workshop or an art activity
+
+**Gallery (8 — mixed crops).** Two display tall, two wide, four square-ish:
+
+4. Classroom in use *(tall)*
+5. Morning assembly in the yard *(wide)*
+6. Pottery painting workshop
+7. Pupils with competition artwork
+8. Kindergarten activity
+9. Community service *(tall)*
+10. World Children's Day celebration *(wide)*
+11. The school building or entrance
+
+**Activity cards (4 — portrait 3:4).** Items 12–15: pottery, drawing competition,
+community service, World Children's Day. These can be the same shoots as the gallery,
+cropped tall.
+
+**Director portrait (1 — portrait 4:5).** Item 16. *The client has said they will send this.*
+
+Many of these already exist on the school's Instagram and can be requested at full
+resolution.
 
 **Rules:**
-- **Written parental consent is required before publishing any identifiable child.** This is
-  the single most important item in this document.
-- Export 1600px wide, WebP, under 200KB.
-- Keep each `<img>`'s existing `width`/`height` — they reserve layout space and stop the page
-  jumping as images load.
+
+- **Written parental consent is required before publishing any identifiable child.**
+  This is the single most important item in this document.
+- Export 1600px wide (1920px for the hero slides), WebP, under 200KB.
+- Keep each image's existing `width`/`height` — they reserve layout space and stop the
+  page jumping as images load.
+- The gallery lightbox opens whatever is in `data-gal`, so point that at the full-size
+  file and the `src` at a smaller thumbnail.
 
 ---
 
@@ -116,6 +140,9 @@ Copy-paste list for the client call:
 10. اسم مدير/مديرة المدرسة كما تريدون ظهوره؟
 11. هل لديكم شعار (لوغو) رسمي بصيغة عالية الدقة؟
 12. هل نستطيع نشر صور التلاميذ؟ وهل لديكم موافقات أولياء الأمور؟
+13. ما التواريخ الفعلية لفعاليات هذا العام (بداية الدوام، اجتماع أولياء الأمور، الحفل الختامي)؟
+14. هل الأنشطة الفنية مشمولة بالرسوم أم عليها أجور إضافية؟
+15. نحتاج صورة المدير/المديرة، والاسم واللقب كما تريدون ظهورهما.
 
 ---
 
@@ -126,8 +153,11 @@ an ear of wheat — and the Qur'anic image of one grain yielding seven (2:261). 
 through the hero, the About section, the logo mark and the section dividers.
 
 This is the one creative decision that most needs the principal's blessing. **Read the
-About section aloud to them.** If it doesn't sound like them, rewrite it — everything else
-on the page can survive a voice change, but that section is the site's centre of gravity.
+About section aloud to them.** If it doesn't sound like them, rewrite it — everything
+else on the page can survive a voice change, but that section is the site's centre of
+gravity.
 
-Fee information is deliberately absent. Most schools in this market prefer to discuss fees
-by phone. If they want fees published, add a section — don't bury it in the FAQ.
+Fee information is deliberately absent as a number. The stage cards say fees are set at
+the start of the year and route parents to WhatsApp instead, which is how most schools
+in this market prefer to handle it. If they want published fees, add them to the stage
+cards — don't bury them in the FAQ.

@@ -33,10 +33,10 @@ These are banned in this project. They are the tells that make a page read as ge
 | Banned | Used instead |
 |---|---|
 | Indigo/violet gradient hero + glass blobs | Warm paper ground, flat editorial colour fields |
-| `Inter` / `Poppins` / `Cairo` as the whole type system | `Amiri` (display) + `IBM Plex Sans Arabic` (text) |
+| `Inter` / `Poppins` / `Cairo` as the whole type system | `Tajawal`, with hierarchy carried by weight (900/800/700/400) |
 | Emoji as icons (🎓📚✨) | Hand-built inline SVG, 1.6px stroke, single family |
 | Three identical rounded feature cards | Asymmetric pairs, editorial rows, varied card weights |
-| Centred hero, two buttons, blurred blob | Off-axis hero: text block + image cluster + wheat motif |
+| Centred hero, two buttons, blurred blob | Full-bleed crossfade slider, copy held to one side behind a directional scrim |
 | Pure `#fff` / `#f9fafb` greys | Warm paper `#FAF6EE`, warm ink `#241D14` |
 | Uniform `border-radius: 12px` everywhere | Mixed radii, incl. one organic "leaf" radius for imagery |
 | Fake metrics ("10,000+ happy students") | Only verifiable facts; unknowns flagged, not invented |
@@ -59,6 +59,7 @@ Warm, earthen, low-chroma ground with two saturated accents. No cool greys anywh
 
 --field:      #35513A;  /* PRIMARY — deep field green */
 --field-2:    #24391F;  /* darkest green, inverted sections */
+--field-3:    #3E5F45;  /* lifted card surface on the dark band */
 --field-soft: #E4EBDF;  /* green tint surface */
 
 --clay:       #B0542E;  /* SECONDARY — Babil terracotta */
@@ -83,28 +84,48 @@ Warm, earthen, low-chroma ground with two saturated accents. No cool greys anywh
 
 ## 4. Typography
 
-Arabic is the primary script. The Latin face was chosen because it is part of the
-*same superfamily* as the Arabic text face, so the bilingual toggle doesn't change
-the page's colour or rhythm.
-
-| Role | Family | Notes |
-|---|---|---|
-| Display (h1, h2, pull quotes) | **Amiri** 400/700 | Classical naskh. Carries heritage and warmth at large sizes; gives the page a voice no sans can. Display only — never below 24px. |
-| Text / UI (body, nav, buttons, forms) | **IBM Plex Sans Arabic** 300–700 | Editorial, highly legible in Arabic, covers Latin natively. |
+**Tajawal**, for both scripts. *(Client decision, 2026-09-21 — supersedes the earlier
+Amiri + IBM Plex Sans Arabic pairing.)* Tajawal carries Arabic and Latin in one family,
+so switching language changes no colour or rhythm on the page. Hierarchy comes from
+**weight**, not from a second family.
 
 ```css
---font-display: 'Amiri', 'Times New Roman', serif;
---font-text:    'IBM Plex Sans Arabic', system-ui, sans-serif;
+--font-display: 'Tajawal', system-ui, sans-serif;   /* 800 / 900 */
+--font-text:    'Tajawal', system-ui, sans-serif;   /* 300-700 */
 ```
+
+| Role | Weight |
+|---|---|
+| Hero / slide titles | 900 |
+| Section headings, card titles | 800 |
+| Buttons, labels, eyebrows, stat numbers | 700 |
+| Body | 400 |
+| Captions and meta | 500 |
+
+Because the family no longer supplies contrast on its own, character has to come from
+colour, shape, spacing and motion instead — see §2, §7 and §8.
 
 **Rules**
 - Body base `17px` (Arabic needs slightly more than 16 to read comfortably).
-- Arabic line-height `1.9` for body, `1.35` for display. Arabic ascenders/descenders
-  and diacritics need more leading than Latin — this is the single most common
-  mistake in Arabic web type.
-- `letter-spacing` on Arabic is **always `0`**. Never track Arabic; it breaks the
-  joined script. Latin display may take `-0.01em`.
+- Arabic line-height `1.85` for body, `1.3` for display. Arabic ascenders, descenders
+  and diacritics need more leading than Latin — the most common mistake in Arabic web type.
+- `letter-spacing` on Arabic is **always `0`**. Tracking breaks the joined script.
 - Fluid display sizing via `clamp()`; no fixed px headings.
+
+### Bidi rules (learned the hard way on this build)
+
+Two separate bugs came from getting this wrong, so it is written down:
+
+1. **A run that is only numerals** (`3-12`, a time, a phone number) must be isolated:
+   `direction: ltr; unicode-bidi: isolate`. Otherwise an RTL paragraph reorders it and
+   `3-12` renders as `12-3`.
+2. **A run that mixes Arabic words with numerals** must *not* be forced LTR — that
+   reorders the whole phrase (`3 - 5 سنوات` became `سنوات 5 - 3`). Either isolate only
+   the numeric span, or phrase it so each numeral sits between strong RTL words
+   (`من 3 إلى 5 سنوات`), which is what the stage pills now do.
+
+Isolated: `.stat-num`, `.tl-time`, `.contact-num`, `.lightbox-count`.
+Deliberately **not** isolated: `.tier-age`.
 
 ---
 
@@ -129,7 +150,7 @@ Marketing page → **low density / spacious**.
 ### Radii
 
 ```css
---r-sm: 8px;  --r-md: 14px;  --r-lg: 22px;  --r-pill: 999px;
+--r-sm: 8px;  --r-md: 14px;  --r-lg: 22px;  --r-xl: 28px;  --r-pill: 999px;
 --r-leaf: 42% 8% 42% 8% / 30% 8% 30% 8%;   /* organic — imagery only, sparingly */
 ```
 
@@ -143,8 +164,15 @@ Tier: **subtle**. This is a school — motion should feel like paper settling, n
   `60ms` stagger, via `IntersectionObserver`, fires **once**.
 - Hover/press: `160ms` in, `120ms` out (exit faster than enter).
 - Only `transform` + `opacity` are animated. Never `width`/`height`/`top`.
+- **Hero slider:** 900ms crossfade + slow Ken Burns; copy enters on a 160/260/360/460ms
+  stagger. Crossfade (not translate) is chosen so the component needs no mirrored
+  logic in RTL.
+- **Counters:** 1400ms `easeOutCubic`, triggered once by `IntersectionObserver`.
+- **Edge effects:** button shine sweep, card glow, the animated `::before` rule on
+  event cards, and the wave `.curve-edge` between bands.
 - `@media (prefers-reduced-motion: reduce)` disables all of it and sets final state —
-  content must never depend on animation to become visible.
+  content must never depend on animation to become visible. Autoplay never starts
+  under reduced motion.
 
 ---
 
@@ -173,6 +201,30 @@ Tier: **subtle**. This is a school — motion should feel like paper settling, n
   `aria-hidden="true"` + `focusable="false"`.
 - **Icons:** one inline SVG family, `stroke-width: 1.6`, `stroke-linecap: round`,
   24×24 viewBox. No icon fonts, no emoji, no CDN icon packs.
+
+### Components added in the v2 build
+
+- **Hero slider:** crossfade only. `aria-roledescription="carousel"`, each slide a
+  `role="group"`; inactive slides get `aria-hidden` **and** `tabindex="-1"` on their
+  links so they leave the tab order. Autoplay pauses on hover, on `focusin`, and when
+  the tab is hidden, and ships a real pause control (WCAG 2.2.2). Arrow keys move
+  between slides and respect the writing direction.
+- **Stat cards:** icon chip + counting number + label. Numbers count once on scroll.
+  A year carries `data-count-plain` so it renders `2016`, never `2,016`.
+- **Tier cards:** four across; the fourth is the filled `--field` "featured" card.
+  Age pills follow the bidi rule in §4.
+- **Gallery:** a spanning mosaic. The span order must **tile exactly** —
+  `tall, wide, normal, normal, normal, tall, wide, normal` fills a 4-column grid's
+  12 cells with no holes. `grid-auto-flow: dense` covers the narrower breakpoints.
+  Thumbnails are `<button>`s, not links: they open a dialog, they don't navigate.
+- **Lightbox:** `role="dialog"` + `aria-modal`, Tab trapped inside, Escape closes,
+  arrow keys navigate by writing direction, focus returns to the thumbnail that
+  opened it, background scroll locked.
+- **Events:** date badge + tag + title + copy, with an animated inline-start edge.
+  Every date except World Children's Day (20 Nov) is a placeholder — see the brief.
+- **Curve edge:** the element's own background must match the band **above**; the SVG
+  path is filled with the colour of the band **below**. Getting this backwards makes
+  the curve invisible.
 
 ---
 

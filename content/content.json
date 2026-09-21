@@ -3,15 +3,18 @@
     "project": "Sunbulah School — bilingual landing page",
     "primaryLanguage": "ar",
     "secondaryLanguage": "en",
-    "direction": { "ar": "rtl", "en": "ltr" },
+    "direction": {
+      "ar": "rtl",
+      "en": "ltr"
+    },
     "lastUpdated": "2026-09-21",
     "confidence": {
       "verified": "Sourced from the school's own Facebook/Instagram/Threads presence.",
       "needsConfirmation": "Plausible but NOT confirmed by the school. Must be checked before launch.",
       "placeholder": "Invented scaffolding so the page renders. Replace entirely."
-    }
+    },
+    "typeface": "Tajawal (client decision) — supersedes Amiri + IBM Plex Sans Arabic"
   },
-
   "identity": {
     "nameAr": "مؤسسة السنبلة التعليمية",
     "nameEn": "Al-Sunbulah Educational Institution",
@@ -25,19 +28,20 @@
     "taglineEn": "Distinctive education. A brighter future.",
     "_source": "verified — Facebook page title, Instagram bio, Threads bio"
   },
-
   "facts": {
     "kindergartenFounded": 2016,
     "primaryFounded": 2019,
     "licensedByAr": "مديرية تربية بابل",
     "licensedByEn": "Babil Directorate of Education",
     "coeducational": true,
-    "stages": ["kindergarten", "primary"],
+    "stages": [
+      "kindergarten",
+      "primary"
+    ],
     "primaryGrades": "1-6",
     "_source": "verified — Threads bio states KG est. 2016, primary est. 2019, licensed by Babil education directorate",
     "_note": "primaryGrades 1-6 is the standard Iraqi primary structure — CONFIRM the school actually runs all six."
   },
-
   "contact": {
     "phone": "07700097426",
     "phoneIntl": "+9647700097426",
@@ -55,21 +59,18 @@
       "Office hours"
     ]
   },
-
   "social": {
     "facebook": "https://www.facebook.com/SunbulahSchool/",
     "instagram": "https://www.instagram.com/sanbula2016/",
     "threads": "https://www.threads.com/@sanbula2016",
     "_source": "verified — supplied by client + confirmed live"
   },
-
   "story": {
     "ar": "اسمنا ليس مصادفة. السنبلة حبّةٌ زُرعت في الأرض، فصبرت، ثم أنبتت سبع سنابل. وهكذا نرى كل طفلٍ يدخل من بابنا: بذرةٌ تحتاج تربةً طيبة، وماءً في وقته، ويداً صبورة تنتظر الموسم دون استعجال. نحن لا نزرع المعلومة وحدها — نزرع الفضول، والخُلق، والثقة بالنفس.",
     "en": "Our name is no accident. A sunbulah is an ear of wheat — one grain planted in the earth, which waited, and then brought forth seven ears. That is how we see every child who walks through our gate: a seed that needs good soil, water at the right moment, and a patient hand willing to wait for the season. We do not plant knowledge alone — we plant curiosity, character, and confidence.",
     "_source": "written for this project; the wheat/seven-ears image is a Qur'anic allusion (2:261) appropriate to the school's name and context",
     "_action": "READ ALOUD TO THE PRINCIPAL. This is the voice of the whole site — it must sound like them, not like us."
   },
-
   "activities": [
     {
       "id": "pottery",
@@ -104,7 +105,6 @@
       "_source": "verified — posted activity"
     }
   ],
-
   "stages": {
     "kindergarten": {
       "titleAr": "الروضة",
@@ -145,40 +145,101 @@
         "Regular progress reports for parents"
       ],
       "_needsConfirmation": "Curriculum framing, whether English/Maths enrichment genuinely exists, class sizes."
-    }
+    },
+    "_note": "The page now presents FOUR tier cards: Kindergarten, Lower primary (1-3), Upper primary (4-6) and a featured Activities card. The 1-3 / 4-6 split is a presentational grouping only, not a claim about separate programmes — see CONTENT-BRIEF.md."
   },
-
   "pillars": [
-    { "ar": "صفوف بأعداد محدودة", "en": "Small class sizes", "_confidence": "needsConfirmation" },
-    { "ar": "كادر تعليمي مؤهل", "en": "Qualified teaching staff", "_confidence": "needsConfirmation" },
-    { "ar": "متابعة يومية مع الأهل", "en": "Daily contact with parents", "_confidence": "needsConfirmation" },
-    { "ar": "أنشطة فنية ومهارية", "en": "Arts and skills activities", "_confidence": "verified" },
-    { "ar": "تربية على القيم والسلوك", "en": "Values and character", "_confidence": "verified" },
-    { "ar": "بيئة آمنة ونظيفة", "en": "A safe, clean environment", "_confidence": "needsConfirmation" }
+    {
+      "ar": "صفوف بأعداد محدودة",
+      "en": "Small class sizes",
+      "_confidence": "needsConfirmation"
+    },
+    {
+      "ar": "كادر تعليمي مؤهل",
+      "en": "Qualified teaching staff",
+      "_confidence": "needsConfirmation"
+    },
+    {
+      "ar": "متابعة يومية مع الأهل",
+      "en": "Daily contact with parents",
+      "_confidence": "needsConfirmation"
+    },
+    {
+      "ar": "أنشطة فنية ومهارية",
+      "en": "Arts and skills activities",
+      "_confidence": "verified"
+    },
+    {
+      "ar": "تربية على القيم والسلوك",
+      "en": "Values and character",
+      "_confidence": "verified"
+    },
+    {
+      "ar": "بيئة آمنة ونظيفة",
+      "en": "A safe, clean environment",
+      "_confidence": "needsConfirmation"
+    }
   ],
-
   "schedule": {
     "_confidence": "placeholder",
     "_action": "REPLACE WITH THE REAL TIMETABLE before launch, or delete the section.",
     "items": [
-      { "time": "7:45", "ar": "الاصطفاف الصباحي", "en": "Morning assembly" },
-      { "time": "8:00", "ar": "الحصص الأساسية", "en": "Core lessons" },
-      { "time": "10:00", "ar": "الفسحة والوجبة", "en": "Break and snack" },
-      { "time": "10:30", "ar": "إنكليزي ورياضيات", "en": "English and maths" },
-      { "time": "12:00", "ar": "نشاط فني أو مهاري", "en": "Arts or skills activity" },
-      { "time": "13:00", "ar": "المراجعة والانصراف", "en": "Review and dismissal" }
+      {
+        "time": "7:45",
+        "ar": "الاصطفاف الصباحي",
+        "en": "Morning assembly"
+      },
+      {
+        "time": "8:00",
+        "ar": "الحصص الأساسية",
+        "en": "Core lessons"
+      },
+      {
+        "time": "10:00",
+        "ar": "الفسحة والوجبة",
+        "en": "Break and snack"
+      },
+      {
+        "time": "10:30",
+        "ar": "إنكليزي ورياضيات",
+        "en": "English and maths"
+      },
+      {
+        "time": "12:00",
+        "ar": "نشاط فني أو مهاري",
+        "en": "Arts or skills activity"
+      },
+      {
+        "time": "13:00",
+        "ar": "المراجعة والانصراف",
+        "en": "Review and dismissal"
+      }
     ]
   },
-
   "admissions": {
     "_confidence": "needsConfirmation",
     "_action": "Verify the document list against what the school actually asks for.",
     "steps": [
-      { "ar": "تواصل معنا هاتفياً أو عبر واتساب", "en": "Call or message us on WhatsApp" },
-      { "ar": "زيارة المدرسة وجولة تعريفية", "en": "Visit the school for a tour" },
-      { "ar": "تقديم مستندات التسجيل", "en": "Submit the enrolment documents" },
-      { "ar": "لقاء بسيط لتحديد المستوى", "en": "A short placement meeting" },
-      { "ar": "إكمال التسجيل واستلام الجدول", "en": "Complete enrolment and receive the timetable" }
+      {
+        "ar": "تواصل معنا هاتفياً أو عبر واتساب",
+        "en": "Call or message us on WhatsApp"
+      },
+      {
+        "ar": "زيارة المدرسة وجولة تعريفية",
+        "en": "Visit the school for a tour"
+      },
+      {
+        "ar": "تقديم مستندات التسجيل",
+        "en": "Submit the enrolment documents"
+      },
+      {
+        "ar": "لقاء بسيط لتحديد المستوى",
+        "en": "A short placement meeting"
+      },
+      {
+        "ar": "إكمال التسجيل واستلام الجدول",
+        "en": "Complete enrolment and receive the timetable"
+      }
     ],
     "documentsAr": [
       "إخراج قيد أو هوية الأحوال المدنية للطفل",
@@ -195,7 +256,6 @@
       "Transfer certificate from the previous school (grades only)"
     ]
   },
-
   "faq": [
     {
       "qAr": "ما الأعمار التي تقبلونها؟",
@@ -241,30 +301,175 @@
       "_confidence": "needsConfirmation"
     }
   ],
-
   "testimonials": {
     "_confidence": "placeholder",
     "_action": "DO NOT LAUNCH WITH THESE. Collect three real parent quotes with permission, or delete the section. Fabricated testimonials are a legal and reputational risk.",
     "items": [
-      { "ar": "—", "en": "—", "byAr": "—", "byEn": "—" }
+      {
+        "ar": "—",
+        "en": "—",
+        "byAr": "—",
+        "byEn": "—"
+      }
     ]
   },
-
   "imagery": {
-    "_action": "Every <img> on the page currently points at assets/img/placeholder.svg. Replace with real photographs.",
+    "_action": "16 images in total. Search the HTML for data-replace to find every slot.",
     "needed": [
-      "Hero: a wide shot of the building entrance or a classroom in use",
-      "Kindergarten: children at a table, mid-activity",
-      "Primary: a classroom or a pupil at the board",
-      "Pottery workshop: hands painting clay",
-      "Drawing competition: pupils with their artwork",
-      "Community service: pupils distributing refreshments",
-      "Two or three candid yard/assembly shots for the gallery"
+      "3 hero slides (1920px landscape)",
+      "8 gallery images",
+      "4 activity cards (portrait 3:4)",
+      "1 director portrait (portrait 4:5)"
     ],
     "rules": [
       "Written parental consent is required before publishing any identifiable child.",
       "Export at 1600px wide, WebP, under 200KB each.",
       "Keep the aspect ratios already set on each <img> so nothing shifts on load."
+    ]
+  },
+  "director": {
+    "_confidence": "placeholder",
+    "_action": "Client is sending the portrait. Replace the photo, the name and the title; confirm or rewrite the quoted line.",
+    "photo": "assets/img/portrait-placeholder.svg",
+    "nameAr": "اسم المدير / المديرة",
+    "nameEn": "Director's name",
+    "roleAr": "كلمة الإدارة",
+    "roleEn": "A word from the director",
+    "quoteAr": "«نستقبل أطفالكم كما نستقبل أبناءنا — ونعدكم أن نصبر عليهم حتى يثمروا.»",
+    "quoteEn": "“We receive your children as we receive our own — and we promise to be patient with them until they bear fruit.”"
+  },
+  "heroSlides": {
+    "_confidence": "verified copy, placeholder imagery",
+    "_action": "Replace all three slide images with real wide photographs (1920px, WebP).",
+    "slides": [
+      {
+        "eyebrowAr": "الكفل — محافظة بابل — منذ 2016",
+        "eyebrowEn": "Al-Kifl, Babil — since 2016",
+        "titleAr": "من بذرةٍ صغيرة… تنمو سنبلة",
+        "titleEn": "From one small seed, a whole harvest",
+        "image": "hero slide 1 — school entrance or a classroom in use"
+      },
+      {
+        "eyebrowAr": "روضة وابتدائية",
+        "eyebrowEn": "Kindergarten & primary",
+        "titleAr": "تعليمٌ متميّز… ومستقبلٌ مشرق",
+        "titleEn": "Distinctive education, a brighter future",
+        "image": "hero slide 2 — pupils in a lesson"
+      },
+      {
+        "eyebrowAr": "المواهب والأنشطة",
+        "eyebrowEn": "Talent & activities",
+        "titleAr": "مواهبُ تُكتشف… وتُصقل",
+        "titleEn": "Talent discovered, then polished",
+        "image": "hero slide 3 — pottery workshop or art competition"
+      }
+    ]
+  },
+  "stats": {
+    "_confidence": "verified — every figure is derivable from confirmed facts",
+    "items": [
+      {
+        "value": 2016,
+        "plain": true,
+        "ar": "سنة التأسيس",
+        "en": "Year founded"
+      },
+      {
+        "value": 10,
+        "suffix": "+",
+        "ar": "سنوات من العطاء",
+        "en": "Years of service"
+      },
+      {
+        "value": 2,
+        "ar": "مرحلة تعليمية",
+        "en": "Educational stages"
+      },
+      {
+        "value": 6,
+        "ar": "صفوف ابتدائية",
+        "en": "Primary grades"
+      },
+      {
+        "value": 4,
+        "suffix": "+",
+        "ar": "أنشطة وفعاليات سنوية",
+        "en": "Annual activities"
+      },
+      {
+        "value": "3–12",
+        "static": true,
+        "ar": "الأعمار المستقبَلة",
+        "en": "Ages welcomed"
+      }
+    ]
+  },
+  "events": {
+    "_confidence": "placeholder dates",
+    "_action": "ONLY World Children's Day (20 November) is a real fixed date. Replace the other five with the school's actual calendar before launch.",
+    "items": [
+      {
+        "day": "15",
+        "monthAr": "أيلول",
+        "monthEn": "Sep",
+        "ar": "انطلاق العام الدراسي",
+        "en": "First day of school",
+        "_date": "placeholder"
+      },
+      {
+        "day": "28",
+        "monthAr": "أيلول",
+        "monthEn": "Sep",
+        "ar": "اجتماع أولياء الأمور",
+        "en": "Parents' meeting",
+        "_date": "placeholder"
+      },
+      {
+        "day": "20",
+        "monthAr": "ت.ثاني",
+        "monthEn": "Nov",
+        "ar": "يوم الطفل العالمي",
+        "en": "World Children's Day",
+        "_date": "real — fixed international date"
+      },
+      {
+        "day": "12",
+        "monthAr": "ك.أول",
+        "monthEn": "Dec",
+        "ar": "ورشة الرسم على الفخار",
+        "en": "Pottery painting workshop",
+        "_date": "placeholder"
+      },
+      {
+        "day": "08",
+        "monthAr": "آذار",
+        "monthEn": "Mar",
+        "ar": "مسابقة الرسم للموهوبين",
+        "en": "Gifted artists' competition",
+        "_date": "placeholder"
+      },
+      {
+        "day": "25",
+        "monthAr": "أيار",
+        "monthEn": "May",
+        "ar": "الحفل الختامي وتوزيع الشهادات",
+        "en": "Closing ceremony",
+        "_date": "placeholder"
+      }
+    ]
+  },
+  "gallery": {
+    "_confidence": "placeholder",
+    "_action": "Eight images. Span order in the HTML must stay tall/wide/normal/normal/normal/tall/wide/normal or the grid develops holes.",
+    "shots": [
+      "Classroom in use (tall)",
+      "Morning assembly in the yard (wide)",
+      "Pottery painting workshop",
+      "Pupils with competition artwork",
+      "Kindergarten activity",
+      "Community service (tall)",
+      "World Children's Day (wide)",
+      "The school building or entrance"
     ]
   }
 }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="presentation">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24391F"/>
+      <stop offset="55%" stop-color="#2F4A34"/>
+      <stop offset="100%" stop-color="#1C3557"/>
+    </linearGradient>
+    <pattern id="hw" width="96" height="96" patternUnits="userSpaceOnUse" patternTransform="rotate(16)">
+      <g fill="none" stroke="#E9B85F" stroke-width="1.8" stroke-linecap="round" opacity="0.16">
+        <path d="M48 20v52M48 30l-11-7M48 30l11-7M48 44l-11-7M48 44l11-7M48 58l-11-7M48 58l11-7"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#hg)"/>
+  <rect width="1600" height="900" fill="url(#hw)"/>
+
+  <g transform="translate(800 400)" opacity="0.5">
+    <g fill="none" stroke="#E9B85F" stroke-width="9" stroke-linecap="round">
+      <path d="M0-110V70M0-76l-40-24M0-76l40-24M0-32l-40-24M0-32l40-24M0 12l-40-24M0 12l40-24"/>
+    </g>
+  </g>
+
+  <!-- Caption sits low and dim so it does not collide with the hero headline
+       while the real photographs are still outstanding. -->
+  <text x="800" y="826" text-anchor="middle"
+        font-family="Tajawal, system-ui, sans-serif" font-size="26" font-weight="700"
+        fill="#F6E7C8" opacity="0.4">صورة الغلاف — استبدلها بصورة حقيقية</text>
+  <text x="800" y="864" text-anchor="middle"
+        font-family="Tajawal, system-ui, sans-serif" font-size="20" fill="#F6E7C8" opacity="0.3">
+    Replace with a real wide photograph (1920px, WebP)
+  </text>
+</svg>
