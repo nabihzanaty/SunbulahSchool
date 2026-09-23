@@ -7,13 +7,14 @@
       "ar": "rtl",
       "en": "ltr"
     },
-    "lastUpdated": "2026-09-21",
+    "lastUpdated": "2026-09-23",
     "confidence": {
       "verified": "Sourced from the school's own Facebook/Instagram/Threads presence.",
       "needsConfirmation": "Plausible but NOT confirmed by the school. Must be checked before launch.",
       "placeholder": "Invented scaffolding so the page renders. Replace entirely."
     },
-    "typeface": "Tajawal (client decision) — supersedes Amiri + IBM Plex Sans Arabic"
+    "typeface": "Tajawal (client decision) — supersedes Amiri + IBM Plex Sans Arabic",
+    "brand": "Navy + gold, taken from the school's crest (assets/img/logo.png) and its 2025–2026 registration post. Supersedes the earlier green/terracotta palette."
   },
   "identity": {
     "nameAr": "مؤسسة السنبلة التعليمية",
@@ -26,7 +27,10 @@
     "descriptorEn": "Private Kindergarten & Primary School",
     "taglineAr": "تعليمٌ متميّز… ومستقبلٌ مشرق",
     "taglineEn": "Distinctive education. A brighter future.",
-    "_source": "verified — Facebook page title, Instagram bio, Threads bio"
+    "_source": "verified — Facebook page title, Instagram bio, Threads bio",
+    "logo": "assets/img/logo.png",
+    "logoTextAr": "جمهورية العراق — وزارة التربية · مؤسسة السنبلة التعليمية · 2016",
+    "_logoSource": "verified — crest supplied by client (225px JPEG). Background cut out to transparent PNG. Ask for a vector/high-res original."
   },
   "facts": {
     "kindergartenFounded": 2016,
@@ -46,18 +50,27 @@
     "phone": "07700097426",
     "phoneIntl": "+9647700097426",
     "whatsapp": "9647700097426",
-    "addressAr": "الكفل — محافظة بابل — العراق",
-    "addressEn": "Al-Kifl, Babil Governorate, Iraq",
+    "addressAr": "الكفل — شارع بني مسلم — عمود 17 — محافظة بابل — العراق",
+    "addressEn": "Bani Muslim Street, pole 17, Al-Kifl, Babil Governorate, Iraq",
     "email": null,
     "mapUrl": null,
-    "_source": "phone + city: verified from Instagram profile contact info",
+    "_source": "phone + city: Instagram profile. Street + pole number: verified — the school's own 2025–2026 registration post (supplied by client, 2026-09-23)",
     "_needsConfirmation": [
-      "Exact street address / nearest landmark",
       "Whether the listed number takes WhatsApp",
       "Official email address",
       "Google Maps pin",
       "Office hours"
-    ]
+    ],
+    "streetAr": "شارع بني مسلم — عمود 17",
+    "streetEn": "Bani Muslim Street, pole 17"
+  },
+  "enrolment": {
+    "yearAr": "2025 – 2026",
+    "yearEn": "2025 – 2026",
+    "headlineAr": "التسجيل لعام 2025 – 2026 مفتوح الآن",
+    "headlineEn": "Enrolment for 2025 – 2026 is open now",
+    "_source": "verified — the school's own 2025–2026 registration post (supplied by client, 2026-09-23)",
+    "_note": "The year appears in 5 places in index.html: #reg-title banner, #admissions lede, FAQ q6, the #contact CTA and og:description. Update all of them together each season. As of 2026-09-23 the post's year (2025–2026) looks one year behind — CONFIRM with the school."
   },
   "social": {
     "facebook": "https://www.facebook.com/SunbulahSchool/",
@@ -148,38 +161,68 @@
     },
     "_note": "The page now presents FOUR tier cards: Kindergarten, Lower primary (1-3), Upper primary (4-6) and a featured Activities card. The 1-3 / 4-6 split is a presentational grouping only, not a claim about separate programmes — see CONTENT-BRIEF.md."
   },
+  "_pillarsSource": "verified — the school's own 2025–2026 registration post (supplied by client, 2026-09-23) — section 'مميزاتنا'. Replaces the six earlier pillars, four of which were unconfirmed.",
   "pillars": [
     {
-      "ar": "صفوف بأعداد محدودة",
-      "en": "Small class sizes",
-      "_confidence": "needsConfirmation"
-    },
-    {
-      "ar": "كادر تعليمي مؤهل",
-      "en": "Qualified teaching staff",
-      "_confidence": "needsConfirmation"
-    },
-    {
-      "ar": "متابعة يومية مع الأهل",
-      "en": "Daily contact with parents",
-      "_confidence": "needsConfirmation"
-    },
-    {
-      "ar": "أنشطة فنية ومهارية",
-      "en": "Arts and skills activities",
+      "ar": "معلمات مؤهلات",
+      "en": "Qualified teachers",
+      "bodyAr": "نهتم برؤية الأطفال للعالم في كل مرحلة عمرية.",
+      "bodyEn": "We care about how children see the world, at every stage of their growth.",
       "_confidence": "verified"
     },
     {
-      "ar": "تربية على القيم والسلوك",
-      "en": "Values and character",
+      "ar": "غرفة ألعاب تفاعلية",
+      "en": "An interactive playroom",
+      "bodyAr": "نوفّر بيئة مليئة بالمرح والاكتشاف.",
+      "bodyEn": "A space full of fun and discovery.",
       "_confidence": "verified"
     },
     {
-      "ar": "بيئة آمنة ونظيفة",
-      "en": "A safe, clean environment",
-      "_confidence": "needsConfirmation"
+      "ar": "برامج تعليم متكاملة",
+      "en": "Complete learning programmes",
+      "bodyAr": "مصمّمة حسب احتياجات كل فئة عمرية.",
+      "bodyEn": "Designed around the needs of each age group.",
+      "_confidence": "verified"
+    },
+    {
+      "ar": "ساحة آمنة للّعب",
+      "en": "A safe play yard",
+      "bodyAr": "تشجّع اللعب والنشاط في بيئة صحية.",
+      "bodyEn": "Encouraging play and activity in a healthy environment.",
+      "_confidence": "verified"
     }
   ],
+  "benefits": {
+    "titleAr": "فوائد التسجيل معنا",
+    "titleEn": "Why families enrol with us",
+    "_source": "verified — the school's own 2025–2026 registration post (supplied by client, 2026-09-23)",
+    "items": [
+      {
+        "ar": "تعليم ممتع ومبني على اللعب",
+        "en": "Enjoyable, play-based learning"
+      },
+      {
+        "ar": "كادر تعليمي متخصص وحنون",
+        "en": "Specialist, caring teaching staff"
+      },
+      {
+        "ar": "تنمية المهارات الاجتماعية والإبداعية",
+        "en": "Social and creative skills development"
+      },
+      {
+        "ar": "تجهيزات حديثة ومساحات واسعة",
+        "en": "Modern equipment and spacious grounds"
+      },
+      {
+        "ar": "وسائل تعليمية حديثة ومتنوعة",
+        "en": "Modern, varied teaching aids"
+      },
+      {
+        "ar": "أنشطة فنية ورياضية يومية",
+        "en": "Daily arts and sports activities"
+      }
+    ]
+  },
   "schedule": {
     "_confidence": "placeholder",
     "_action": "REPLACE WITH THE REAL TIMETABLE before launch, or delete the section.",

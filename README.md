@@ -9,6 +9,8 @@ Arabic is the default language and the default reading direction. English is a t
 index.html                              the page
 assets/css/styles.css                   all styling (one sheet, RTL + LTR)
 assets/js/main.js                       language toggle, nav, FAQ, reveal, form
+assets/img/logo.png                     the school's crest (transparent cut-out of the client's JPEG)
+assets/img/favicon.png, apple-touch-icon.png   crest icons
 assets/img/placeholder.svg              stand-in for gallery/activity photos
 assets/img/hero-placeholder.svg         dark stand-in for the 3 hero slides
 assets/img/portrait-placeholder.svg     stand-in for the director portrait
@@ -34,7 +36,7 @@ Read **[CONTENT-BRIEF.md](CONTENT-BRIEF.md)**. It marks every claim on the page 
 2. Replace the **event calendar dates** — only World Children's Day (20 Nov) is real
 3. Verify or remove the enrolment document list and the daily timetable
 4. Drop in the **director's photo, name and title** (client is sending the photo)
-5. Confirm the address: Facebook says الحلة, Instagram says الكفل
+5. Confirm the **enrolment year** — the school's post says 2025 – 2026, which looks a year behind
 
 ---
 
@@ -153,11 +155,15 @@ re-running if the markup changes substantially.
 Full rationale in [design-system/sunbulah-school/MASTER.md](design-system/sunbulah-school/MASTER.md),
 including an explicit list of banned generic-template patterns.
 
-The short version: **سنبلة** means *ear of wheat*, so the whole identity is cultivation — a seed
-tended patiently into a harvest. Colours come from Babil's soil and sky (field green, wheat
-gold, terracotta, lapis) on warm paper, never cool grey. Type is **Tajawal** across both
-scripts, so switching language changes nothing about the page's colour or rhythm — the
-hierarchy is carried by weight instead, and the character by colour, shape and motion.
+The short version: colours come straight from the school's **crest** — deep navy `#031439`
+and gold `#C5A059` — with the pale blue ground and slate panel of its 2025–2026 registration
+post. The crest itself is the header mark. The voice is still built on **سنبلة** (*ear of
+wheat*): a seed tended patiently into a harvest. Type is **Tajawal** across both scripts, so
+switching language changes nothing about the page's colour or rhythm — the hierarchy is
+carried by weight instead, and the character by colour, shape and motion.
+
+**The logo is a raster** (225px source). It only sits on light grounds — on navy the shield
+edge disappears. Ask the school for a vector original before using it any larger.
 
 > **Note on provenance:** the `ui-ux-pro-max` skill's searchable dataset isn't installed on this
 > machine (only `SKILL.md` synced — no `scripts/` or `references/`). The design decisions follow

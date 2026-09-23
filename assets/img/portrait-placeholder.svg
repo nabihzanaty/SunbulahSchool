@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="presentation">
   <defs>
     <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDE3D2"/>
-      <stop offset="100%" stop-color="#E4EBDF"/>
+      <stop offset="0%" stop-color="#E2E8F2"/>
+      <stop offset="100%" stop-color="#E3E9F5"/>
     </linearGradient>
   </defs>
 
   <rect width="800" height="1000" fill="url(#pg)"/>
 
-  <g fill="none" stroke="#35513A" stroke-width="14" stroke-linecap="round" opacity="0.32">
+  <g fill="none" stroke="#0E2356" stroke-width="14" stroke-linecap="round" opacity="0.32">
     <circle cx="400" cy="395" r="120"/>
     <path d="M205 735a195 195 0 0 1 390 0"/>
   </g>
 
   <text x="400" y="835" text-anchor="middle"
         font-family="Tajawal, system-ui, sans-serif" font-size="30" font-weight="700"
-        fill="#4A3F32" opacity="0.72">صورة المدير / المديرة</text>
+        fill="#34405C" opacity="0.72">صورة المدير / المديرة</text>
   <text x="400" y="878" text-anchor="middle"
-        font-family="Tajawal, system-ui, sans-serif" font-size="22" fill="#6E6152" opacity="0.62">
+        font-family="Tajawal, system-ui, sans-serif" font-size="22" fill="#5B6682" opacity="0.62">
     Director portrait — to be supplied
   </text>
 </svg>

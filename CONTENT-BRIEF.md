@@ -18,6 +18,8 @@ social presence:
 | [Facebook `/SunbulahSchool`](https://www.facebook.com/SunbulahSchool/) | Legal name `مدرسة السنبلة الابتدائية الأهلية المختلطة`, city (Al-Hillah/Babil) |
 | [Instagram `@sanbula2016`](https://www.instagram.com/sanbula2016/) | Trading name `مؤسسة السنبلة التعليمية`, phone, location "بابل - الكفل", positioning line |
 | [Threads `@sanbula2016`](https://www.threads.com/@sanbula2016) | **The most valuable source** — KG founded 2016, primary founded 2019, licensed by Babil education directorate, and real activity posts |
+| **Registration post** (sent by the client, Sept 2026) | "التسجيل لعام 2025 _ 2026 مفتوح الآن", the four features (مميزاتنا), the six benefits (فوائد التسجيل معنا), and the street address `الكفل _ شارع بني مسلم _ عمود 17` |
+| **Official crest** (sent by the client) | The navy + gold brand colours, and the wording "جمهورية العراق – وزارة التربية · مؤسسة السنبلة التعليمية · 2016". Now `assets/img/logo.png` (header, registration banner, favicon). |
 
 ---
 
@@ -29,17 +31,26 @@ social presence:
 - **Primary school founded:** 2019
 - **Licensed by:** مديرية تربية بابل (Babil Directorate of Education)
 - **Co-educational** (مختلطة) — stated in the legal name itself
-- **Location:** الكفل، محافظة بابل، العراق
+- **Address:** الكفل — شارع بني مسلم — عمود 17، محافظة بابل، العراق *(from the registration post)*
 - **Phone:** 07700097426
 - **Real activities**, all from the school's own posts:
   - الرسم على الفخار — pottery painting workshop
   - مسابقة الرسم للموهوبين — gifted young artists' drawing competition
   - خدمة زائري الإمام الحسين — pupils distributing refreshments to pilgrims
   - يوم الطفل العالمي — World Children's Day
+- **Features** (مميزاتنا, from the registration post) — now the `#why` section, in the
+  school's own words: معلمات مؤهلات · غرفة ألعاب تفاعلية · برامج تعليم متكاملة · ساحة آمنة للّعب
+- **Benefits** (فوائد التسجيل معنا, same post) — the gold panel under the features:
+  تعليم ممتع ومبني على اللعب · كادر تعليمي متخصص وحنون · تنمية المهارات الاجتماعية والإبداعية ·
+  تجهيزات حديثة ومساحات واسعة · وسائل تعليمية حديثة ومتنوعة · أنشطة فنية ورياضية يومية
 
-> The Facebook page lists the city as **الحلة** while Instagram says **الكفل**. Both are in
-> Babil governorate and are ~25km apart. The site currently says الكفل, following the more
-> specific and more recent source. **Confirm which is correct.**
+> **Resolved:** Facebook said الحلة, Instagram said الكفل. The school's own registration post
+> gives **الكفل — شارع بني مسلم — عمود 17**, so the site uses that.
+
+> **The features replaced six earlier "Why us" pillars.** Four of those were our inferences
+> (small classes, qualified staff, daily parent contact, supervised safe building); they are
+> gone from that section. "Small classes" and "daily contact" still appear on the stage cards
+> and remain in §3.
 
 ---
 
@@ -55,11 +66,11 @@ stated. Walk through this list with the principal.
 | Ages | KG from 3, primary to 12 | Inferred from the stage structure |
 | Curriculum | Official Iraqi national curriculum + enrichment in English/Maths | The "enrichment" claim is ours. Only keep it if it's true. |
 | Class sizes | "صفوف بأعداد محدودة" (small classes) | A competitive claim. Needs a real number or softer wording. |
-| Teaching staff | "كادر تعليمي مؤهل" | Safe framing, but confirm they're comfortable with it |
 | Parent contact | Reports, teacher meetings, class messaging group | Confirm the actual channels |
-| Safety/supervision | Supervised arrival to handover | Confirm the real policy |
 | Enrolment documents | 5-item list (civil ID, parent ID, photos, health report, transfer certificate) | **Highest priority to verify** — parents will act on this |
-| Exact address | Only "الكفل، بابل" | Need street / nearest landmark + a Google Maps pin |
+| **Enrolment year** | "التسجيل لعام 2025 – 2026 مفتوح الآن" (banner, admissions, FAQ, contact) | Copied exactly from the post. **But today is Sept 2026, when the new year would be 2026 – 2027.** Confirm the year; it appears in 5 places (see `content/content.json` → `enrolment._note`). |
+| Map pin | Street + pole number only, no map | Need a Google Maps pin for the contact card |
+| Logo resolution | The crest is a 225px JPEG, cut out to PNG | Fine in the header; blurry anywhere larger. Ask for the vector/print original. |
 | **Director's name, title and photo** | Placeholder portrait + the literal text "اسم المدير / المديرة" | **Client said they will send the photo.** The quoted line beneath it was written by us — confirm or replace. |
 | **Grade groupings (1–3 / 4–6)** | Shown as "الصفوف الأولى" and "الصفوف العليا" | A presentational grouping for the four-card layout, **not** a claim that these are separate programmes. Confirm the school is happy with the framing. |
 | "بلا رسوم إضافية" on the activities card | Claims activities carry no extra fee | We inferred this. If activities are charged, it must change. |
@@ -128,7 +139,7 @@ resolution.
 
 Copy-paste list for the client call:
 
-1. الحلة أم الكفل؟ وما العنوان بالتحديد (أقرب نقطة دالة)؟
+1. هل التسجيل لعام 2025–2026 أم 2026–2027؟ وهل يمكن إرسال رابط الموقع على خرائط Google؟
 2. ما الصفوف المتوفرة فعلياً هذا العام؟ (الأول إلى السادس؟)
 3. ما أعمار القبول في الروضة؟ وهل يوجد صف تمهيدي؟
 4. ما المستندات المطلوبة للتسجيل بالضبط؟
@@ -138,7 +149,7 @@ Copy-paste list for the client call:
 8. هل الرقم 07700097426 يستقبل واتساب؟ وهل يوجد بريد إلكتروني؟
 9. هل توجد رسوم دراسية تُنشر على الموقع، أم يُفضّل الاستفسار هاتفياً؟
 10. اسم مدير/مديرة المدرسة كما تريدون ظهوره؟
-11. هل لديكم شعار (لوغو) رسمي بصيغة عالية الدقة؟
+11. وصلنا الشعار — هل تتوفر نسخة بدقة عالية أو بصيغة متجهة (PDF / AI / SVG)؟
 12. هل نستطيع نشر صور التلاميذ؟ وهل لديكم موافقات أولياء الأمور؟
 13. ما التواريخ الفعلية لفعاليات هذا العام (بداية الدوام، اجتماع أولياء الأمور، الحفل الختامي)؟
 14. هل الأنشطة الفنية مشمولة بالرسوم أم عليها أجور إضافية؟

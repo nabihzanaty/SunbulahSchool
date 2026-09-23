@@ -17,9 +17,11 @@ meaning: a seed that is planted, tended patiently, and yields many-fold. This is
 anti-generic anchor — every visual decision traces back to *cultivation*, not to
 stock "edtech".
 
-Secondary anchor: **place**. Al-Kifl, Babil — Mesopotamian river farmland, mud-brick,
-clay, and the lapis-and-gold of ancient Babylon. The palette is drawn from the soil
-and the sky of the school's actual governorate.
+**Visual anchor: the school's own crest** (client-supplied, 2026-09-23) — a navy shield
+with gold laurels, a star, an open book and the ribbon "مؤسسة السنبلة التعليمية · 2016".
+The palette is taken from it and from the school's 2025–2026 registration post, so the
+site reads as the same institution as its signage and social posts. *(This supersedes
+the earlier Babil soil palette — field green, terracotta, lapis on warm paper.)*
 
 **Voice:** warm, plain, parental. Speaks to a mother deciding where to send a 4-year-old.
 Never corporate, never "empowering learners to unlock their potential."
@@ -32,12 +34,12 @@ These are banned in this project. They are the tells that make a page read as ge
 
 | Banned | Used instead |
 |---|---|
-| Indigo/violet gradient hero + glass blobs | Warm paper ground, flat editorial colour fields |
+| Indigo/violet gradient hero + glass blobs | Pale paper ground, flat navy and gold colour fields |
 | `Inter` / `Poppins` / `Cairo` as the whole type system | `Tajawal`, with hierarchy carried by weight (900/800/700/400) |
 | Emoji as icons (🎓📚✨) | Hand-built inline SVG, 1.6px stroke, single family |
 | Three identical rounded feature cards | Asymmetric pairs, editorial rows, varied card weights |
 | Centred hero, two buttons, blurred blob | Full-bleed crossfade slider, copy held to one side behind a directional scrim |
-| Pure `#fff` / `#f9fafb` greys | Warm paper `#FAF6EE`, warm ink `#241D14` |
+| Pure `#fff` / `#f9fafb` greys | Blue-tinted paper `#F6F8FC`, navy ink `#0B1733` |
 | Uniform `border-radius: 12px` everywhere | Mixed radii, incl. one organic "leaf" radius for imagery |
 | Fake metrics ("10,000+ happy students") | Only verifiable facts; unknowns flagged, not invented |
 | Plain `<hr>` section breaks | Repeating wheat-glyph rule |
@@ -46,39 +48,41 @@ These are banned in this project. They are the tells that make a page read as ge
 
 ## 3. Colour tokens
 
-Warm, earthen, low-chroma ground with two saturated accents. No cool greys anywhere.
+Crest navy + crest gold on a pale blue-tinted ground (the post's background).
 
 ```css
---paper:      #FAF6EE;  /* page ground — warm, not white */
---paper-2:    #F3ECDF;  /* alternating band */
---paper-3:    #EDE3D2;  /* inset / input fill */
---ink:        #241D14;  /* headings, body — warm near-black */
---ink-2:      #4A3F32;  /* secondary text */
---muted:      #6E6152;  /* captions, meta */
---line:       #E3D9C7;  /* hairlines */
+--paper:      #F6F8FC;  /* page ground */
+--paper-2:    #EDF1F8;  /* alternating band — the post's background */
+--paper-3:    #E2E8F2;  /* inset / input fill */
+--ink:        #0B1733;  /* headings, body — navy near-black */
+--ink-2:      #34405C;  /* secondary text */
+--muted:      #5B6682;  /* captions, meta */
+--line:       #D9E0EC;  /* hairlines */
 
---field:      #35513A;  /* PRIMARY — deep field green */
---field-2:    #24391F;  /* darkest green, inverted sections */
---field-3:    #3E5F45;  /* lifted card surface on the dark band */
---field-soft: #E4EBDF;  /* green tint surface */
+--navy:       #0E2356;  /* PRIMARY — buttons, icons */
+--navy-2:     #031439;  /* crest navy — dark bands, footer */
+--navy-3:     #13295E;  /* lifted card surface on the dark band */
+--navy-soft:  #E3E9F5;  /* navy tint surface */
 
---clay:       #B0542E;  /* SECONDARY — Babil terracotta */
---clay-soft:  #F7E2D6;
+--bronze:     #8A6A2C;  /* SECONDARY — crest's shaded gold; focus ring */
+--bronze-soft:#F3EAD6;
 
---lapis:      #1C3557;  /* Babylon lapis — deep inverted band */
+--slate:      #303249;  /* the post's slate panel — contact band */
 
---gold-light: #8A5A12;  /* gold for SMALL TEXT on paper (AA-safe) */
---gold:       #C88A2E;  /* gold for LARGE display text + decoration only */
---gold-dark:  #E9B85F;  /* gold for text on dark grounds (AA-safe) */
---gold-soft:  #F6E7C8;
+--gold-light: #7A5A1C;  /* gold for SMALL TEXT on paper (AA-safe, 5.97:1) */
+--gold:       #C5A059;  /* crest gold — fills + decoration only */
+--gold-dark:  #D8B872;  /* gold for text on dark grounds (AA-safe, 9.47:1 on navy-2) */
+--gold-soft:  #F5ECD8;
 ```
 
 ### Contrast rules (priority 1 — CRITICAL)
 
-- `--gold` **never** carries body text on `--paper` (≈2.9:1). Large display or
-  decorative strokes only. Small gold text uses `--gold-light`.
-- On `--field-2` / `--lapis` grounds, gold text uses `--gold-dark`.
+- `--gold` **never** carries text on `--paper` (2.3:1). Fills (buttons, the benefits
+  panel, icon discs) and decorative strokes only — with navy text on top (7.4:1).
+  Small gold text uses `--gold-light`.
+- On `--navy-2` / `--slate` grounds, gold text uses `--gold-dark`.
 - Body text is `--ink` or `--ink-2`. `--muted` is the floor — never lighter.
+- The crest (`assets/img/logo.png`) is a raster with a navy edge: light grounds only.
 
 ---
 
@@ -181,8 +185,8 @@ Tier: **subtle**. This is a school — motion should feel like paper settling, n
 - **Grain:** fixed full-viewport `feTurbulence` SVG overlay, `opacity .035`,
   `mix-blend-mode: multiply`, `pointer-events: none`. Kills the flat-vector look.
 - **Wheat rule:** repeating SVG wheat glyph as section divider, in `--line` / `--gold`.
-- **Wheat mark:** the logo is a drawn ear of wheat, inline SVG, `currentColor`,
-  so it inverts on dark bands for free.
+- **Crest:** the header mark is the school's real crest (`assets/img/logo.png`), not a
+  drawn glyph. It is also the favicon and sits in the registration banner.
 
 ---
 
@@ -209,6 +213,11 @@ Tier: **subtle**. This is a school — motion should feel like paper settling, n
   links so they leave the tab order. Autoplay pauses on hover, on `focusin`, and when
   the tab is hidden, and ships a real pause control (WCAG 2.2.2). Arrow keys move
   between slides and respect the writing direction.
+- **Registration banner** (`.reg-band`): crest + "التسجيل لعام / 2025 – 2026 / مفتوح الآن"
+  + a phone card with a gold icon tile — a direct translation of the school's post. The
+  year is *not* isolated LTR, so in Arabic it reads 2025 first, right-to-left, as the post does.
+- **Features + benefits** (`#why`): four features as gold icon discs in a 2 × 2 grid, then a
+  gold "فوائد التسجيل معنا" panel with navy check discs — both from the post.
 - **Stat cards:** icon chip + counting number + label. Numbers count once on scroll.
   A year carries `data-count-plain` so it renders `2016`, never `2,016`.
 - **Tier cards:** four across; the fourth is the filled `--field` "featured" card.
