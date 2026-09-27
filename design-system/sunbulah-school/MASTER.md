@@ -129,7 +129,7 @@ Two separate bugs came from getting this wrong, so it is written down:
    (`من 3 إلى 5 سنوات`), which is what the stage pills now do.
 
 Isolated: `.stat-num`, `.tl-time`, `.contact-num`, `.lightbox-count`.
-Deliberately **not** isolated: `.tier-age`.
+Deliberately **not** isolated: `.stack-age`.
 
 ---
 
@@ -220,7 +220,7 @@ Tier: **subtle**. This is a school — motion should feel like paper settling, n
   gold "فوائد التسجيل معنا" panel with navy check discs — both from the post.
 - **Stat cards:** icon chip + counting number + label. Numbers count once on scroll.
   A year carries `data-count-plain` so it renders `2016`, never `2,016`.
-- **Tier cards:** four across; the fourth is the filled `--field` "featured" card.
+- **Stage cards:** four stacked cards that pin below the header (`position: sticky`) and scale back as the next arrives (`main.js` 9b); the fourth is the dark "featured" Activities card. Plain list under reduced motion.
   Age pills follow the bidi rule in §4.
 - **Gallery:** a spanning mosaic. The span order must **tile exactly** —
   `tall, wide, normal, normal, normal, tall, wide, normal` fills a 4-column grid's

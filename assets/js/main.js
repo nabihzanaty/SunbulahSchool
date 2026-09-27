@@ -363,6 +363,45 @@
   }
 
   /* ---------------------------------------------------------------
+     9b. Stacked stage cards
+     CSS pins each card (position: sticky). This only scales a card down
+     as the next one slides over it. Skipped under reduced motion.
+  --------------------------------------------------------------- */
+  var stack = document.querySelector('[data-stack]');
+
+  if (stack && !reduced) {
+    var slots = Array.prototype.slice.call(stack.querySelectorAll('.stack-slot'));
+    var BASE_SCALE = 0.9;
+    var SCALE_STEP = 0.025;
+    var stackFrame = 0;
+
+    var updateStack = function () {
+      stackFrame = 0;
+      slots.forEach(function (slot, i) {
+        var card = slot.firstElementChild;
+        var next = slots[i + 1];
+        if (!card) return;
+        var p = 0;
+        if (next) {
+          var pinnedTop = parseFloat(getComputedStyle(next).top) || 0;
+          var gap = next.getBoundingClientRect().top - pinnedTop;
+          p = Math.min(1, Math.max(0, 1 - gap / (card.offsetHeight || 1)));
+        }
+        var target = BASE_SCALE + i * SCALE_STEP;
+        card.style.transform = 'scale(' + (1 - p * (1 - target)) + ')';
+      });
+    };
+
+    var requestStack = function () {
+      if (!stackFrame) stackFrame = window.requestAnimationFrame(updateStack);
+    };
+
+    window.addEventListener('scroll', requestStack, { passive: true });
+    window.addEventListener('resize', requestStack);
+    updateStack();
+  }
+
+  /* ---------------------------------------------------------------
      10. Enquiry form
      No backend is wired up yet. The form validates inline, then hands
      the parent off to WhatsApp with their message prefilled — which is

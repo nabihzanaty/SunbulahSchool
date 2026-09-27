@@ -684,68 +684,84 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .director-word { margin-block-start: var(--sp-3); font-size: .97rem; color: var(--ink-2); }
 
 /* ==========================================================================
-   14. TIER CARDS (stages)
+   14. STAGE CARDS — stacked (sticky) cards
    ========================================================================== */
-.tiers { display: grid; gap: var(--sp-5); }
-@media (min-width: 620px)  { .tiers { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1060px) { .tiers { grid-template-columns: repeat(4, 1fr); } }
+/* Each card pins just below the sticky header, offset a little further per card so
+   the edges of the earlier ones stay visible. main.js scales the cards behind as the
+   next one arrives. Sticky needs every ancestor to be overflow: visible. */
+.stack {
+  --stack-top: 96px;
+  --stack-step: 22px;
+  max-inline-size: 980px;
+  margin-inline: auto;
+  margin-block-start: var(--sp-8);
+}
+.stack-slot {
+  position: sticky;
+  inset-block-start: calc(var(--stack-top) + var(--i, 0) * var(--stack-step));
+  margin-block-end: 40px;
+}
+.stack-slot:last-child { margin-block-end: 0; }
 
-.tier {
-  background: var(--paper);
+.stack-card {
+  display: grid;
+  gap: var(--sp-5);
+  padding: var(--sp-6);
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: var(--sp-6);
-  display: flex; flex-direction: column;
-  box-shadow: var(--shadow-1);
-  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-2);
+  transform-origin: top center;
+  will-change: transform;
 }
-.tier:hover { transform: translateY(-6px); box-shadow: var(--shadow-3); }
+@media (min-width: 900px) {
+  .stack-card { grid-template-columns: 1fr 1.15fr; align-items: center; gap: var(--sp-7); padding: var(--sp-7); }
+}
+.stack-card--gold  { background: var(--gold-soft); border-color: rgba(197,160,89,.4); }
+.stack-card--soft  { background: var(--navy-soft); border-color: rgba(14,35,86,.15); }
+.stack-card--white { background: #FFFFFF; }
+.stack-card--dark  { background: var(--navy-2); border-color: var(--navy-3); color: #EEF2F9; }
 
-.tier-age {
-  align-self: flex-start;
-  font-size: .74rem; font-weight: 800;
-  padding: 5px var(--sp-4);
+.stack-head { display: flex; flex-direction: column; align-items: flex-start; }
+.stack-age {
+  font-size: .82rem; font-weight: 800;
+  padding: 4px var(--sp-4);
   border-radius: var(--r-pill);
-  background: var(--navy-soft);
-  color: var(--navy-2);
-  margin-block-end: var(--sp-4);
-  /* No forced LTR here: the pill mixes Arabic words with numbers, and forcing
-     the whole run LTR reorders it ("3 — 5 سنوات" became "سنوات 5 — 3").
-     The Arabic copy uses "من X إلى Y" so each numeral sits between strong
-     RTL words and the bidi algorithm orders it correctly on its own. */
-}
-.tier h3 { font-size: 1.42rem; }
-.tier-sub { font-size: .87rem; color: var(--muted); margin-block-start: 2px; }
-.tier ul { margin-block: var(--sp-5); display: grid; gap: var(--sp-3); flex: 1; }
-.tier li { display: flex; gap: var(--sp-3); align-items: flex-start; font-size: .93rem; color: var(--ink-2); }
-.tier li .ico {
-  inline-size: 19px; block-size: 19px; flex: none; margin-block-start: 4px;
-  color: var(--navy); stroke-width: 2.1;
-}
-
-/* Featured card — the enrichment tier */
-.tier-featured {
   background: var(--navy);
-  border-color: var(--navy);
-  color: #EEF2F9;
-  position: relative;
-  overflow: hidden;
+  color: #F8FAFE;
+  /* No forced LTR: the pill mixes Arabic words with numbers ("من 3 إلى 5 سنوات"),
+     and forcing the whole run LTR reorders it. */
 }
-.tier-featured::before {
-  content: "";
-  position: absolute;
-  inset-block-start: -50%; inset-inline-end: -40%;
-  inline-size: 120%; block-size: 120%;
-  background: radial-gradient(circle at 70% 25%, rgba(216,184,114,.24), transparent 60%);
-  pointer-events: none;
+.stack-card h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: var(--navy-2); margin-block-start: var(--sp-4); }
+.stack-sub { margin-block-start: 2px; font-weight: 500; color: var(--muted); }
+.stack-head .btn { margin-block-start: var(--sp-5); }
+
+.stack-points { display: grid; gap: var(--sp-3); }
+.stack-points li {
+  display: flex; align-items: flex-start; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  background: rgba(255,255,255,.7);
+  font-weight: 500;
+  color: var(--ink);
 }
-.tier-featured h3 { color: #FFFFFF; position: relative; z-index: 2; }
-.tier-featured .tier-sub { color: #C3CDE3; position: relative; z-index: 2; }
-.tier-featured .tier-age { background: var(--gold-dark); color: #031439; position: relative; z-index: 2; }
-.tier-featured ul { position: relative; z-index: 2; }
-.tier-featured li { color: #DDE3EF; }
-.tier-featured li .ico { color: var(--gold-dark); }
-.tier-featured .btn { position: relative; z-index: 2; }
+.stack-points .ico { inline-size: 20px; block-size: 20px; flex: none; margin-block-start: 5px; color: var(--bronze); stroke-width: 2.1; }
+
+.stack-card--white .stack-points li { background: var(--paper-2); }
+.stack-card--dark h3 { color: #FFFFFF; }
+.stack-card--dark .stack-sub { color: #C9D1E3; }
+.stack-card--dark .stack-age { background: var(--gold); color: #031439; }
+.stack-card--dark .stack-points li { background: var(--navy-3); color: #FFFFFF; }
+.stack-card--dark .stack-points .ico { color: var(--gold-dark); }
+.stack-card--dark :focus-visible { outline-color: var(--gold-dark); }
+
+@media (max-width: 899px) { .stack { --stack-top: 84px; --stack-step: 16px; } }
+
+/* Reduced motion: a plain, unpinned list. */
+@media (prefers-reduced-motion: reduce) {
+  .stack-slot { position: static; margin-block-end: var(--sp-5); }
+  .stack-card { will-change: auto; }
+}
 
 .tier-note {
   margin-block-start: var(--sp-6);

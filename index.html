@@ -519,90 +519,105 @@
          data-en="Tuition for each stage is set at the start of the year. Contact the office for details and to discuss what suits your family.">تُحدَّد الرسوم الدراسية لكل مرحلة مع بداية العام. تواصل مع الإدارة لمعرفة التفاصيل ومناقشة ما يناسب أسرتك.</p>
     </div>
 
-    <div class="tiers" style="margin-block-start:var(--sp-8)">
-      <article class="tier reveal">
-        <span class="tier-age" data-ar="من 3 إلى 5 سنوات" data-en="Ages 3 — 5">من 3 إلى 5 سنوات</span>
-        <h3 data-ar="الروضة" data-en="Kindergarten">الروضة</h3>
-        <p class="tier-sub" data-ar="تمهيدي · روضة · منذ 2016"
-           data-en="Pre-KG · KG · since 2016">تمهيدي · روضة · منذ 2016</p>
-        <ul>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="التعلّم باللعب والاكتشاف" data-en="Learning through play and discovery">التعلّم باللعب والاكتشاف</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="الحروف والأرقام والمهارات الأولى" data-en="Letters, numbers and first skills">الحروف والأرقام والمهارات الأولى</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="الفنون والأشغال اليدوية" data-en="Art and hands-on making">الفنون والأشغال اليدوية</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="بناء السلوك والاعتماد على النفس" data-en="Behaviour and independence">بناء السلوك والاعتماد على النفس</span></li>
-        </ul>
-        <a class="btn btn-primary btn-sm btn-block" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
-          <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
-          <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </article>
+    <!-- Stacked stage cards (ported from the React build's ScrollStack): each card pins
+         below the header with position: sticky; main.js only scales the cards behind
+         as the next one arrives. Under reduced motion they render as a plain list. -->
+    <div class="stack" data-stack>
+      <div class="stack-slot" style="--i:0">
+        <article class="stack-card stack-card--gold">
+          <div class="stack-head">
+            <span class="stack-age" data-ar="من 3 إلى 5 سنوات" data-en="Ages 3 — 5">من 3 إلى 5 سنوات</span>
+            <h3 data-ar="الروضة" data-en="Kindergarten">الروضة</h3>
+            <p class="stack-sub" data-ar="تمهيدي · روضة · منذ 2016" data-en="Pre-KG · KG · since 2016">تمهيدي · روضة · منذ 2016</p>
+            <a class="btn btn-primary btn-sm" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
+              <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
+              <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <ul class="stack-points">
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="التعلّم باللعب والاكتشاف" data-en="Learning through play and discovery">التعلّم باللعب والاكتشاف</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="الحروف والأرقام والمهارات الأولى" data-en="Letters, numbers and first skills">الحروف والأرقام والمهارات الأولى</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="الفنون والأشغال اليدوية" data-en="Art and hands-on making">الفنون والأشغال اليدوية</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="بناء السلوك والاعتماد على النفس" data-en="Behaviour and independence">بناء السلوك والاعتماد على النفس</span></li>
+          </ul>
+        </article>
+      </div>
 
-      <article class="tier reveal">
-        <span class="tier-age" data-ar="من 6 إلى 9 سنوات" data-en="Ages 6 — 9">من 6 إلى 9 سنوات</span>
-        <h3 data-ar="الصفوف الأولى" data-en="Lower primary">الصفوف الأولى</h3>
-        <p class="tier-sub" data-ar="الأول · الثاني · الثالث الابتدائي"
-           data-en="Grades 1 · 2 · 3">الأول · الثاني · الثالث الابتدائي</p>
-        <ul>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="المنهج الوزاري العراقي المعتمد" data-en="The Iraqi national curriculum">المنهج الوزاري العراقي المعتمد</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="تأسيس في القراءة والكتابة" data-en="Grounding in reading and writing">تأسيس في القراءة والكتابة</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="صفوف بأعداد محدودة" data-en="Small class sizes">صفوف بأعداد محدودة</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="متابعة يومية مع الأهل" data-en="Daily contact with parents">متابعة يومية مع الأهل</span></li>
-        </ul>
-        <a class="btn btn-primary btn-sm btn-block" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
-          <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
-          <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </article>
+      <div class="stack-slot" style="--i:1">
+        <article class="stack-card stack-card--soft">
+          <div class="stack-head">
+            <span class="stack-age" data-ar="من 6 إلى 9 سنوات" data-en="Ages 6 — 9">من 6 إلى 9 سنوات</span>
+            <h3 data-ar="الصفوف الأولى" data-en="Lower primary">الصفوف الأولى</h3>
+            <p class="stack-sub" data-ar="الأول · الثاني · الثالث الابتدائي" data-en="Grades 1 · 2 · 3">الأول · الثاني · الثالث الابتدائي</p>
+            <a class="btn btn-primary btn-sm" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
+              <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
+              <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <ul class="stack-points">
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="المنهج الوزاري العراقي المعتمد" data-en="The Iraqi national curriculum">المنهج الوزاري العراقي المعتمد</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تأسيس في القراءة والكتابة" data-en="Grounding in reading and writing">تأسيس في القراءة والكتابة</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="صفوف بأعداد محدودة" data-en="Small class sizes">صفوف بأعداد محدودة</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="متابعة يومية مع الأهل" data-en="Daily contact with parents">متابعة يومية مع الأهل</span></li>
+          </ul>
+        </article>
+      </div>
 
-      <article class="tier reveal">
-        <span class="tier-age" data-ar="من 9 إلى 12 سنة" data-en="Ages 9 — 12">من 9 إلى 12 سنة</span>
-        <h3 data-ar="الصفوف العليا" data-en="Upper primary">الصفوف العليا</h3>
-        <p class="tier-sub" data-ar="الرابع · الخامس · السادس الابتدائي"
-           data-en="Grades 4 · 5 · 6">الرابع · الخامس · السادس الابتدائي</p>
-        <ul>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="تقوية في الإنكليزية والرياضيات" data-en="Support in English and maths">تقوية في الإنكليزية والرياضيات</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="تهيئة لامتحانات الصف السادس" data-en="Preparation for the grade six exams">تهيئة لامتحانات الصف السادس</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="تقارير دورية لولي الأمر" data-en="Regular progress reports">تقارير دورية لولي الأمر</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="مهارات الدراسة والاعتماد على النفس" data-en="Study skills and independence">مهارات الدراسة والاعتماد على النفس</span></li>
-        </ul>
-        <a class="btn btn-primary btn-sm btn-block" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
-          <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
-          <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </article>
+      <div class="stack-slot" style="--i:2">
+        <article class="stack-card stack-card--white">
+          <div class="stack-head">
+            <span class="stack-age" data-ar="من 9 إلى 12 سنة" data-en="Ages 9 — 12">من 9 إلى 12 سنة</span>
+            <h3 data-ar="الصفوف العليا" data-en="Upper primary">الصفوف العليا</h3>
+            <p class="stack-sub" data-ar="الرابع · الخامس · السادس الابتدائي" data-en="Grades 4 · 5 · 6">الرابع · الخامس · السادس الابتدائي</p>
+            <a class="btn btn-primary btn-sm" href="https://wa.me/9647700097426" target="_blank" rel="noopener">
+              <span data-ar="استفسر عن الرسوم" data-en="Ask about fees">استفسر عن الرسوم</span>
+              <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <ul class="stack-points">
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تقوية في الإنكليزية والرياضيات" data-en="Support in English and maths">تقوية في الإنكليزية والرياضيات</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تهيئة لامتحانات الصف السادس" data-en="Preparation for the grade six exams">تهيئة لامتحانات الصف السادس</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="تقارير دورية لولي الأمر" data-en="Regular progress reports">تقارير دورية لولي الأمر</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="مهارات الدراسة والاعتماد على النفس" data-en="Study skills and independence">مهارات الدراسة والاعتماد على النفس</span></li>
+          </ul>
+        </article>
+      </div>
 
-      <article class="tier tier-featured reveal">
-        <span class="tier-age" data-ar="على مدار العام" data-en="All year round">على مدار العام</span>
-        <h3 data-ar="الأنشطة والمواهب" data-en="Activities &amp; talent">الأنشطة والمواهب</h3>
-        <p class="tier-sub" data-ar="لكل المراحل · بلا رسوم إضافية"
-           data-en="All stages · no extra fee">لكل المراحل · بلا رسوم إضافية</p>
-        <ul>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="ورش الرسم على الفخار" data-en="Pottery painting workshops">ورش الرسم على الفخار</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="مسابقات الرسم للموهوبين" data-en="Competitions for gifted artists">مسابقات الرسم للموهوبين</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="مشاركات في خدمة المجتمع" data-en="Community service projects">مشاركات في خدمة المجتمع</span></li>
-          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
-            <span data-ar="احتفالات ومناسبات مدرسية" data-en="School celebrations and events">احتفالات ومناسبات مدرسية</span></li>
-        </ul>
-        <a class="btn btn-gold btn-sm btn-block" href="#gallery">
-          <span data-ar="شاهد الصور" data-en="See the photos">شاهد الصور</span>
-          <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-        </a>
-      </article>
+      <div class="stack-slot" style="--i:3">
+        <article class="stack-card stack-card--dark">
+          <div class="stack-head">
+            <span class="stack-age" data-ar="على مدار العام" data-en="All year round">على مدار العام</span>
+            <h3 data-ar="الأنشطة والمواهب" data-en="Activities &amp; talent">الأنشطة والمواهب</h3>
+            <p class="stack-sub" data-ar="لكل المراحل · بلا رسوم إضافية" data-en="All stages · no extra fee">لكل المراحل · بلا رسوم إضافية</p>
+            <a class="btn btn-gold btn-sm" href="#gallery">
+              <span data-ar="شاهد الصور" data-en="See the photos">شاهد الصور</span>
+              <svg class="ico ico-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <ul class="stack-points">
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="ورش الرسم على الفخار" data-en="Pottery painting workshops">ورش الرسم على الفخار</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="مسابقات الرسم للموهوبين" data-en="Competitions for gifted artists">مسابقات الرسم للموهوبين</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="مشاركات في خدمة المجتمع" data-en="Community service projects">مشاركات في خدمة المجتمع</span></li>
+            <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+              <span data-ar="احتفالات ومناسبات مدرسية" data-en="School celebrations and events">احتفالات ومناسبات مدرسية</span></li>
+          </ul>
+        </article>
+      </div>
     </div>
 
     <p class="tier-note reveal"
