@@ -163,14 +163,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-block-end: var(--sp-3);
 }
 .band-dark .eyebrow, .band-slate .eyebrow { color: var(--gold-dark); }
-.eyebrow::before {
-  content: "";
-  inline-size: 26px;
-  block-size: 2px;
-  background: currentColor;
-  border-radius: var(--r-pill);
-}
-
+ 
 .section-title { font-size: clamp(1.85rem, 4.2vw, 2.9rem); }
 .section-lede {
   margin-block-start: var(--sp-4);
@@ -576,8 +569,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    12. STAT CARDS (icon chip + counting number)
    ========================================================================== */
 .stats { display: grid; gap: var(--sp-4); grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 760px)  { .stats { grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); } }
-@media (min-width: 1060px) { .stats { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 760px)  { .stats { grid-template-columns: repeat(2, 1fr); gap: var(--sp-5); } }
+@media (min-width: 1060px) { .stats { grid-template-columns: repeat(4, 1fr); } }
 
 .stat-card {
   background: var(--navy-3);
@@ -868,25 +861,33 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .reg-call-num { font-size: 1.3rem; font-weight: 800; color: var(--navy-2); direction: ltr; unicode-bidi: isolate; }
 
 /* ---------- 16. Activities ---------- */
-.activities { display: grid; gap: var(--sp-6); }
-@media (min-width: 720px)  { .activities { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1060px) { .activities { grid-template-columns: repeat(4, 1fr); } }
-.activity { display: flex; flex-direction: column; }
-.activity-media {
-  aspect-ratio: 3 / 4;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  background: var(--paper-3);
+.enrich { display: grid; gap: var(--sp-5); }
+@media (min-width: 620px)  { .enrich { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1060px) { .enrich { grid-template-columns: repeat(4, 1fr); } }
+.enrich-card {
+  position: relative;
+  display: flex; flex-direction: column; gap: var(--sp-2);
+  padding: var(--sp-6);
+  background: #FFFFFF;
   border: 1px solid var(--line);
-  margin-block-end: var(--sp-4);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-1);
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
 }
-.activity-media img {
-  inline-size: 100%; block-size: 100%; object-fit: cover;
-  transition: transform 520ms var(--ease);
+.enrich-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+.enrich-ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  inline-size: 56px; block-size: 56px; border-radius: 50%;
+  background: var(--navy); color: var(--gold-dark);
+  margin-block-end: var(--sp-3);
 }
-.activity:hover .activity-media img { transform: scale(1.06); }
-.activity h3 { font-size: 1.16rem; margin-block-end: var(--sp-2); }
-.activity p { font-size: .92rem; color: var(--ink-2); }
+.enrich-ico .ico { inline-size: 26px; block-size: 26px; }
+.enrich-num {
+  position: absolute; inset-block-start: var(--sp-5); inset-inline-end: var(--sp-5);
+  font-size: 2.4rem; font-weight: 900; line-height: 1; color: var(--gold-soft);
+}
+.enrich-card h3 { font-size: 1.3rem; color: var(--navy-2); }
+.enrich-card p { color: var(--ink-2); font-weight: 500; }
 
 /* ==========================================================================
    17. GALLERY + LIGHTBOX
@@ -1058,7 +1059,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- 20. Admissions ---------- */
 .adm-grid { display: grid; gap: var(--sp-8); }
-@media (min-width: 960px) { .adm-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-9); } }
+@media (min-width: 960px) { .adm-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-9); align-items: start; } }
 
 .steps { counter-reset: step; display: grid; gap: var(--sp-5); margin-block-start: var(--sp-6); }
 .step { display: flex; gap: var(--sp-4); align-items: flex-start; }
@@ -1120,6 +1121,89 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .form-status.show { display: block; animation: lb-in 300ms var(--ease) both; }
 
+/* ---------- 21b. Enquiry card (photo panel + form) ---------- */
+.enquiry {
+  display: grid;
+  margin-block-start: var(--sp-9);
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+}
+@media (min-width: 960px) { .enquiry { grid-template-columns: .9fr 1.1fr; } }
+
+.enquiry-media { position: relative; isolation: isolate; min-block-size: 300px; display: flex; align-items: flex-end; }
+.enquiry-media img { position: absolute; inset: 0; z-index: -2; inline-size: 100%; block-size: 100%; object-fit: cover; object-position: 45% 35%; }
+.enquiry-media::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to top, rgba(3,20,57,.96) 10%, rgba(3,20,57,.72) 55%, rgba(3,20,57,.35));
+}
+.enquiry-intro { padding: var(--sp-7) var(--sp-6); color: #E6EBF5; }
+@media (min-width: 960px) { .enquiry-intro { padding: var(--sp-8) var(--sp-7); } }
+.enquiry-intro .eyebrow { color: var(--gold-dark); }
+.enquiry-intro h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; color: #FFFFFF; }
+.enquiry-intro p { margin-block-start: var(--sp-3); color: #C9D1E3; }
+.enquiry-quick { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-block-start: var(--sp-5); }
+.enquiry-quick a {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  min-block-size: 46px; padding-inline: var(--sp-5);
+  border-radius: var(--r-pill);
+  background: rgba(246,248,252,.12); border: 1px solid rgba(246,248,252,.25);
+  color: #FFFFFF; font-weight: 700; text-decoration: none;
+  transition: background-color 160ms var(--ease), color 160ms var(--ease);
+}
+.enquiry-quick a:hover { background: var(--gold); border-color: var(--gold); color: #031439; }
+.enquiry-quick .ico { inline-size: 18px; block-size: 18px; }
+
+.enquiry-form { margin: 0; padding: var(--sp-7) var(--sp-6); gap: var(--sp-5); }
+@media (min-width: 960px) { .enquiry-form { padding: var(--sp-8) var(--sp-7); } }
+
+/* Inputs with a leading icon (logical side, so it mirrors in RTL) */
+.input-wrap { position: relative; }
+.input-wrap > .ico {
+  position: absolute; inset-inline-start: var(--sp-4); inset-block-start: 15px;
+  inline-size: 20px; block-size: 20px; color: var(--muted); pointer-events: none;
+  transition: color 160ms var(--ease);
+}
+.input-wrap:focus-within > .ico { color: var(--navy); }
+.enquiry-form .field input,
+.enquiry-form .field textarea {
+  background: var(--paper-2);
+  border-color: transparent;
+  border-radius: var(--r-md);
+  padding-inline-start: 48px;
+}
+.enquiry-form .field input:focus,
+.enquiry-form .field textarea:focus { background: #FFFFFF; border-color: var(--navy); }
+.enquiry-form .field #f-phone { text-align: end; }
+[dir="ltr"] .enquiry-form .field #f-phone { text-align: start; }
+/* #f-phone is dir=ltr, so in the RTL page its inline sides are flipped relative to the icon. */
+[dir="rtl"] .enquiry-form .field #f-phone { padding-inline-start: var(--sp-4); padding-inline-end: 48px; }
+.enquiry-form .field.invalid input { border-color: #9C2F16; background: #FDF4F2; }
+
+/* Stage choice as pill options instead of a dropdown */
+fieldset.field { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+fieldset.field legend { padding: 0; margin-block-end: var(--sp-2); font-weight: 700; font-size: .92rem; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.chip-opt { position: relative; cursor: pointer; }
+.chip-opt input { position: absolute; opacity: 0; inline-size: 1px; block-size: 1px; }
+.chip-opt span {
+  display: inline-flex; align-items: center; min-block-size: 44px;
+  padding-inline: var(--sp-5);
+  border-radius: var(--r-pill);
+  background: var(--paper-2);
+  border: 1.5px solid transparent;
+  font-weight: 700; font-size: .92rem; color: var(--ink-2);
+  transition: background-color 160ms var(--ease), color 160ms var(--ease), border-color 160ms var(--ease);
+}
+.chip-opt:hover span { border-color: #B9C3D6; }
+.chip-opt input:checked + span { background: var(--navy); color: #FFFFFF; border-color: var(--navy); }
+.chip-opt input:focus-visible + span { outline: 3px solid var(--bronze); outline-offset: 3px; }
+.field.invalid .chip-opt span { border-color: #9C2F16; }
+
+.enquiry-submit { inline-size: 100%; }
+
 /* ---------- 22. FAQ ---------- */
 .faq { margin-block-start: var(--sp-7); max-inline-size: 860px; margin-inline: auto; }
 .faq-item {
@@ -1163,10 +1247,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: transform 200ms var(--ease), background-color 200ms var(--ease);
 }
 .contact-card:hover { transform: translateY(-4px); background: rgba(246,248,252,.1); }
-.contact-card .ico { inline-size: 26px; block-size: 26px; color: var(--gold-dark); margin-block-end: var(--sp-4); }
+.contact-card .ico { inline-size: 26px; block-size: 26px; color: var(--gold-dark);  }
 .contact-card h3 { font-size: 1.16rem; margin-block-end: var(--sp-2); }
 .contact-card a, .contact-card p { color: #C9D1E3; text-decoration: none; font-size: .96rem; }
 .contact-card a:hover { color: var(--gold-dark); }
+.contact-card .map-link {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  min-block-size: 44px; margin-block-start: var(--sp-3);
+  color: var(--gold-dark); font-weight: 700;
+}
+.contact-card .map-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.contact-card .map-link .ico { inline-size: 18px; block-size: 18px; }
 .contact-num { direction: ltr; unicode-bidi: isolate; font-weight: 700; letter-spacing: .02em; }
 
 .socials { display: flex; gap: var(--sp-3); margin-block-start: var(--sp-4); }
@@ -1181,14 +1272,52 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- 24. Footer ---------- */
 .footer {
-  background: var(--navy-2); color: #A9B3C9;
-  padding-block: var(--sp-7); font-size: .86rem;
   position: relative; z-index: 2;
-  border-block-start: 1px solid rgba(246,248,252,.1);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--navy-2);
+  color: #C9D1E3;
+  font-size: .95rem;
+  border-block-start: 3px solid var(--gold);
 }
-.footer-in { display: flex; flex-wrap: wrap; gap: var(--sp-4); align-items: center; justify-content: space-between; }
-.footer a { color: #C9D1E3; text-decoration: none; }
+.footer-grid {
+  display: grid; gap: var(--sp-7);
+  padding-block: var(--sp-9) var(--sp-7);
+}
+@media (min-width: 760px)  { .footer-grid { grid-template-columns: 1.3fr 1fr; } }
+@media (min-width: 1060px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1.2fr; gap: var(--sp-8); } }
+
+.footer a { color: #E6EBF5; text-decoration: none; transition: color 160ms var(--ease); }
 .footer a:hover { color: var(--gold-dark); }
+
+.footer-logo { display: inline-flex; align-items: center; gap: var(--sp-4); min-block-size: 44px; }
+/* The crest is a raster that only reads on light grounds, so it sits on a paper disc. */
+.footer-crest {
+  display: inline-flex; align-items: center; justify-content: center;
+  inline-size: 72px; block-size: 72px; border-radius: 50%;
+  background: var(--paper); box-shadow: 0 0 0 3px rgba(197,160,89,.5);
+  flex: none;
+}
+.footer-crest img { inline-size: 54px; block-size: 54px; object-fit: contain; }
+.footer-name { font-size: 1.3rem; font-weight: 900; color: #FFFFFF; line-height: 1.4; }
+.footer-tag { margin-block-start: var(--sp-4); max-inline-size: 38ch; color: #C9D1E3; }
+.footer .socials { margin-block-start: var(--sp-5); }
+
+.footer-h { font-size: 1.05rem; font-weight: 800; color: var(--gold-dark); margin-block-end: var(--sp-4); }
+.footer-links { display: grid; gap: 2px; }
+.footer-links a { display: inline-flex; align-items: center; min-block-size: 40px; }
+.footer-contact { display: grid; gap: var(--sp-3); }
+.footer-contact li { display: flex; align-items: center; gap: var(--sp-3); }
+.footer-contact .ico { inline-size: 20px; block-size: 20px; flex: none; color: var(--gold-dark); }
+.footer-contact a { display: inline-flex; align-items: center; min-block-size: 44px; }
+.footer-cta { margin-block-start: var(--sp-5); }
+
+.footer-bottom {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: space-between;
+  padding-block: var(--sp-5);
+  border-block-start: 1px solid rgba(246,248,252,.14);
+  font-size: .85rem; color: #A9B3C9;
+}
 
 /* ---------- 25. Scroll reveal ----------
    Content must never depend on JS to become visible. The hidden start state is

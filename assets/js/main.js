@@ -21,6 +21,7 @@
 
   var ATTR_MAP = {
     placeholder: 'placeholder',
+    value: 'value',
     label: 'aria-label',
     aria: 'aria-label',
     content: 'content',

@@ -44,6 +44,10 @@ social presence:
   تعليم ممتع ومبني على اللعب · كادر تعليمي متخصص وحنون · تنمية المهارات الاجتماعية والإبداعية ·
   تجهيزات حديثة ومساحات واسعة · وسائل تعليمية حديثة ومتنوعة · أنشطة فنية ورياضية يومية
 
+- **Enrichment lessons** (الدروس الإثرائية, supplied by the client, Sept 2026) — the `#enrichment` section
+  and the fourth stage card: Genius MAP (الحساب الذهني الياباني) · حفظ وتلاوة القرآن الكريم ·
+  Stanford (تعليم اللغة الإنكليزية) · درس الحاسوب (المهارات الرقمية)
+
 > **Resolved:** Facebook said الحلة, Instagram said الكفل. The school's own registration post
 > gives **الكفل — شارع بني مسلم — عمود 17**, so the site uses that.
 
@@ -69,11 +73,11 @@ stated. Walk through this list with the principal.
 | Parent contact | Reports, teacher meetings, class messaging group | Confirm the actual channels |
 | Enrolment documents | 5-item list (civil ID, parent ID, photos, health report, transfer certificate) | **Highest priority to verify** — parents will act on this |
 | **Enrolment year** | "التسجيل لعام 2025 – 2026 مفتوح الآن" (banner, admissions, FAQ, contact) | Copied exactly from the post. **But today is Sept 2026, when the new year would be 2026 – 2027.** Confirm the year; it appears in 5 places (see `content/content.json` → `enrolment._note`). |
-| Map pin | Street + pole number only, no map | Need a Google Maps pin for the contact card |
+| ~~Map pin~~ | **Resolved** — client supplied https://goo.gl/maps/8zRzTqLAp2SDVf3m7 (contact card link) | — |
 | Logo resolution | The crest is a 225px JPEG, cut out to PNG | Fine in the header; blurry anywhere larger. Ask for the vector/print original. |
 | **Director's name, title and photo** | Placeholder portrait + the literal text "اسم المدير / المديرة" | **Client said they will send the photo.** The quoted line beneath it was written by us — confirm or replace. |
 | **Grade groupings (1–3 / 4–6)** | Shown as "الصفوف الأولى" and "الصفوف العليا" | A presentational grouping for the four-card layout, **not** a claim that these are separate programmes. Confirm the school is happy with the framing. |
-| "بلا رسوم إضافية" on the activities card | Claims activities carry no extra fee | We inferred this. If activities are charged, it must change. |
+| ~~"بلا رسوم إضافية" on the activities card~~ | **Removed** — the fourth stage card now lists the enrichment lessons | If the lessons are free, say so on the card; otherwise leave it. |
 | "تُحدَّد الرسوم مع بداية العام" | Implies fees are set annually and discussed by phone | Confirm this is how they want fees handled on the site |
 
 ---
